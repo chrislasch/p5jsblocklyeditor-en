@@ -12,8 +12,8 @@ Blockly.Blocks['adt_stack_neu'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTStapel);
- this.setTooltip("Ein leerer Stapel wird angelegt.");
- this.setHelpUrl("");
+    this.setTooltip("Creates an empty stack.");
+    this.setHelpUrl("");
   }
 };
 
@@ -40,12 +40,12 @@ Blockly.Blocks['adt_stack_isEmpty'] = {
     this.appendValueInput("stackVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".isEmpty(): Wahrheitswert");
+        .appendField(".isEmpty(): Boolean");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTStapel);
- this.setTooltip("Wenn der Stapel kein Element enthält, wird der Wert wahr zurückgegeben, sonst der Wert falsch.");
- this.setHelpUrl("");
+    this.setTooltip("Returns true if the stack contains no elements, otherwise false.");
+    this.setHelpUrl("");
   }
 };
 
@@ -60,12 +60,12 @@ Blockly.Blocks['adt_stack_top'] = {
     this.appendValueInput("stackVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".top(): Inhalt");
+        .appendField(".top(): Value");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTStapel);
- this.setTooltip("Der Inhalt des obersten Elements des Stapels wird zurückgegeben, das Element aber nicht entfernt.");
- this.setHelpUrl("");
+    this.setTooltip("Returns the value of the top element of the stack without removing it.");
+    this.setHelpUrl("");
   }
 };
 
@@ -88,8 +88,8 @@ Blockly.Blocks['adt_stack_push'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTStapel);
- this.setTooltip("Ein neues Element mit dem angegebenen Inhalt wird auf den Stapel gelegt.");
- this.setHelpUrl("");
+    this.setTooltip("Pushes a new element with the given value onto the stack.");
+    this.setHelpUrl("");
   }
 };
 
@@ -105,12 +105,12 @@ Blockly.Blocks['adt_stack_pop'] = {
     this.appendValueInput("stackVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".pop(): Inhalt");
+        .appendField(".pop(): Value");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTStapel);
- this.setTooltip("Der Inhalt des obersten Elements wird zurückgegeben und das Element wird entfernt.");
- this.setHelpUrl("");
+    this.setTooltip("Returns the value of the top element and removes it from the stack.");
+    this.setHelpUrl("");
   }
 };
 
@@ -125,12 +125,12 @@ Blockly.Blocks['adt_stack_getStack'] = {
     this.appendValueInput("stackVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".getStack(): Inhalt");
+        .appendField(".getStack(): Content");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTStapel);
- this.setTooltip("Der gesamte Inhalt des Stapels wird als Array zurückgegeben.");
- this.setHelpUrl("");
+    this.setTooltip("Returns the entire content of the stack as an array.");
+    this.setHelpUrl("");
   }
 };
 

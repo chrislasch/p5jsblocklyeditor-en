@@ -4,9 +4,9 @@
 Blockly.Blocks['p5text_number'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Textausgabe:")
-        .appendField(new Blockly.FieldTextInput("Hallo!"), "text")
-        .appendField("an Position: x =")
+        .appendField("Text output:")
+        .appendField(new Blockly.FieldTextInput("Hello!"), "text")
+        .appendField("at position: x =")
         .appendField(new Blockly.FieldNumber(0, -maxKoord, maxKoord, 1), "xkoord")
         .appendField("y =")
         .appendField(new Blockly.FieldNumber(0, -maxKoord, maxKoord, 1), "ykoord");
@@ -14,8 +14,8 @@ Blockly.Blocks['p5text_number'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Gibt an der angegebenen Position einen Text aus.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/text");
+    this.setTooltip("Displays text at the given position.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/text");
   }
 };
 
@@ -31,21 +31,21 @@ Blockly.Blocks['p5textbox_number'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Textbox:")
-        .appendField(new Blockly.FieldTextInput("Hallo!"), "text")
-        .appendField("an Position: x =")
+        .appendField(new Blockly.FieldTextInput("Hello!"), "text")
+        .appendField("at position: x =")
         .appendField(new Blockly.FieldNumber(0, -maxKoord, maxKoord, 1), "xkoord")
         .appendField("y =")
         .appendField(new Blockly.FieldNumber(0, -maxKoord, maxKoord, 1), "ykoord")
-        .appendField("| Breite: ")
+        .appendField("| width: ")
         .appendField(new Blockly.FieldNumber(0, 0, maxKoord, 1), "breite")
-        .appendField("Höhe:")
+        .appendField("height:")
         .appendField(new Blockly.FieldNumber(0, 0, maxKoord, 1), "hoehe");        
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Gibt an der angegebenen Position eine Textbox aus.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/text");
+    this.setTooltip("Displays a textbox at the given position.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/text");
   }
 };
 
@@ -62,13 +62,13 @@ Blockly.JavaScript['p5textbox_number'] = function(block) {
 Blockly.Blocks['p5textsize_number'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Textgröße:")
+        .appendField("Text size:")
         .appendField(new Blockly.FieldNumber(0, 0, maxKoord, 1), "textsize");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Legt die Textgröße fest.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/textSize");
+    this.setTooltip("Sets the text size.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/textSize");
   }
 };
 
@@ -82,13 +82,13 @@ Blockly.JavaScript['p5textsize_number'] = function(block) {
 Blockly.Blocks['p5textalign'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Text-Ausrichtung:")
-        .appendField(new Blockly.FieldDropdown([["zentriert","p5sketch.CENTER"], ["linksbündig","p5sketch.LEFT"], ["rechtsbündig","p5sketch.RIGHT"]]), "align");
+        .appendField("Text alignment:")
+        .appendField(new Blockly.FieldDropdown([["centered","p5sketch.CENTER"], ["left aligned","p5sketch.LEFT"], ["right aligned","p5sketch.RIGHT"]]), "align");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Textausrichtung (linksbündig, zentriert, rechtsbündig)");
- this.setHelpUrl("https://p5js.org/reference/#/p5/textAlign");
+    this.setTooltip("Text alignment (left, center, right)");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/textAlign");
   }
 };
 
@@ -101,12 +101,12 @@ Blockly.JavaScript['p5textalign'] = function(block) {
 Blockly.Blocks['p5text_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Textausgabe:");
+        .appendField("Text output:");
     this.appendValueInput("text_eingabe")
         .setCheck("String")
     this.appendValueInput("xKoord")
         .setCheck("Number")
-        .appendField("an Position: x =");
+        .appendField("at position: x =");
     this.appendValueInput("yKoord")
         .setCheck("Number")
         .appendField("y =");
@@ -114,8 +114,8 @@ Blockly.Blocks['p5text_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Gibt an der angegebenen Position einen Text aus.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/text");
+    this.setTooltip("Displays text at the given position.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/text");
   }
 };
 
@@ -135,22 +135,22 @@ Blockly.Blocks['p5textbox_var'] = {
         .setCheck("String")
     this.appendValueInput("xKoord")
         .setCheck("Number")
-        .appendField("an Position: x =");
+        .appendField("at position: x =");
     this.appendValueInput("yKoord")
         .setCheck("Number")
         .appendField("y =");
     this.appendValueInput("breite")
         .setCheck("Number")
-        .appendField("| Breite:");
+        .appendField("| width:");
     this.appendValueInput("hoehe")
         .setCheck("Number")
-        .appendField("Höhe:");        
+        .appendField("height:");        
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Gibt an der angegebenen Position eine Textbox aus.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/text");
+    this.setTooltip("Displays a textbox at the given position.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/text");
   }
 };
 
@@ -167,15 +167,15 @@ Blockly.JavaScript['p5textbox_var'] = function(block) {
 Blockly.Blocks['p5textsize_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Textgröße:");
+        .appendField("Text size:");
     this.appendValueInput("text_groesse")
         .setCheck("Number");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Legt die Textgröße fest.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/textSize");
+    this.setTooltip("Sets the text size.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/textSize");
   }
 };
 
@@ -189,7 +189,7 @@ Blockly.Blocks['text_input'] = {
   init: function() {
     this.appendDummyInput()
     this.appendValueInput("textFeldVariable")
-        .appendField("Texteingabe: ");      
+        .appendField("Text input: ");      
     this.appendValueInput("xKoord")
         .setCheck("Number")
         .appendField("| x =");
@@ -198,18 +198,18 @@ Blockly.Blocks['text_input'] = {
         .appendField("y =");
     this.appendValueInput("breite")
         .setCheck("Number")
-        .appendField("| Breite:");
+        .appendField("| width:");
     this.appendValueInput("speicherVariable")
         .setCheck("String")
-        .appendField("| Speichervariable");
+        .appendField("| storage variable");
     this.appendValueInput("zeichenflaecheVariable")
         .appendField("| ");        
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Eingabefeld für die Eingabe von Text, der in einer Variable gespeichert wird.");
- this.setHelpUrl("");
+    this.setTooltip("Input field for entering text, which is stored in a variable.");
+    this.setHelpUrl("");
   }
 };
 
@@ -229,16 +229,16 @@ Blockly.Blocks['anzeige_stellen'] = {
     this.appendValueInput("zahl")
         .setCheck("Number")
     this.appendDummyInput()
-        .appendField("mit");
+        .appendField("with");
     this.appendValueInput("anzahlstellen")
         .setCheck("Number")
     this.appendDummyInput()
-        .appendField("Nachkommastellen");
+        .appendField("decimal places");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Legt die Anzahl Stellen hinter dem Komma fest.");
- this.setHelpUrl("");
+    this.setTooltip("Sets the number of decimal places.");
+    this.setHelpUrl("");
   }
 };
 
@@ -257,8 +257,8 @@ Blockly.Blocks['text_unicodezeichen'] = {
     this.setInputsInline(false);
     this.setOutput(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Eingabe eines Unicodes und Ausgabe des Schriftzeichens.");
- this.setHelpUrl("");
+    this.setTooltip("Enter a Unicode and output the character.");
+    this.setHelpUrl("");
   }
 };
 
@@ -271,18 +271,18 @@ Blockly.JavaScript['text_unicodezeichen'] = function(block) {
 Blockly.Blocks['zeichen_an_stelle_aus_string'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Zeichen aus");    
+        .appendField("Character from");    
     this.appendValueInput("zeichenfolge")
         .setCheck("String")
     this.appendDummyInput()
-        .appendField("an Index:");
+        .appendField("at index:");
     this.appendValueInput("stelle")
         .setCheck("Number")
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Holt ein Zeichen aus einer Zeichenfolge an der gegebenen Stelle.");
- this.setHelpUrl("");
+    this.setTooltip("Gets a character from a string at the given position.");
+    this.setHelpUrl("");
   }
 };
 
@@ -298,12 +298,12 @@ Blockly.Blocks['string_in_ganzzahl'] = {
     this.appendValueInput("zeichenfolge")
         .setCheck("String")
     this.appendDummyInput()
-        .appendField("in Ganzzahl umwandeln");
+        .appendField("convert to integer");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbep5Text);
- this.setTooltip("Wandelt den String in eine Zeichenfolge um.");
- this.setHelpUrl("");
+    this.setTooltip("Converts the string to an integer.");
+    this.setHelpUrl("");
   }
 };
 

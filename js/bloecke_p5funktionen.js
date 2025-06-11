@@ -1,22 +1,22 @@
 // Pt 2021 - MIT-License
 
-//Kategorie: p5-Funktionen
+//Category: p5 Functions
 Blockly.Blocks['setup'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("setup()");
     this.appendValueInput("zeichenflaecheVariable")
     this.appendDummyInput()
-        .appendField("Breite =")
+        .appendField("Width =")
         .appendField(new Blockly.FieldNumber(startWidth, 0, maxKoord, 1), "canvasBreite")
-        .appendField("Höhe =")
+        .appendField("Height =")
         .appendField(new Blockly.FieldNumber(startWidth, 0, maxKoord, 1), "canvasHoehe");
     this.setInputsInline(true);         
     this.appendStatementInput("do")
         .setCheck(null);
     this.setColour(farbep5SetupDraw);
- this.setTooltip("Die setup()-Funktion wird einmal beim Programmstart ausgeführt.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/setup");
+    this.setTooltip("The setup() function is executed once at program start.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/setup");
   }
 };
 
@@ -36,7 +36,7 @@ Blockly.Blocks['draw'] = {
     this.appendStatementInput("do")
         .setCheck(null)
     this.setColour(farbep5SetupDraw);
-    this.setTooltip('Die draw()-Funktion wird ständig wiederholt.');
+    this.setTooltip('The draw() function is continuously executed.');
     this.setHelpUrl('https://p5js.org/reference/#/p5/draw');
   }
 };
@@ -54,7 +54,7 @@ Blockly.Blocks['preload'] = {
     this.appendStatementInput("do")
         .setCheck(null)
     this.setColour(farbep5SetupDraw);
-    this.setTooltip('Die preload()-Funktion wird ausgeführt um Bilder zu laden.');
+    this.setTooltip('The preload() function is executed to load images.');
     this.setHelpUrl('https://p5js.org/reference/#/p5/preload');
   }
 };
@@ -68,11 +68,11 @@ Blockly.JavaScript['preload'] = function(block) {
 Blockly.Blocks['mousepressed'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Wenn Maus geklickt...");
+        .appendField("When mouse is pressed...");
     this.appendStatementInput("do")
         .setCheck(null)
     this.setColour(farbep5Funktionen);
-    this.setTooltip('Führe die folgenden Anweisungen aus, wenn die Maus geklickt wurde.');
+    this.setTooltip('Execute the following statements when the mouse is pressed.');
     this.setHelpUrl('https://p5js.org/reference/#/p5.Element/mousePressed');
   }
 };
@@ -86,11 +86,11 @@ Blockly.JavaScript['mousepressed'] = function(block) {
 Blockly.Blocks['keypressed'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Wenn eine Taste gedrückt...");
+        .appendField("When a key is pressed...");
     this.appendStatementInput("do")
         .setCheck(null)
     this.setColour(farbep5Funktionen);
-    this.setTooltip('Führe die folgenden Anweisungen aus, wenn eine Taste auf der Tastatur gedrückt wurde.');
+    this.setTooltip('Execute the following statements when a key is pressed.');
     this.setHelpUrl('https://p5js.org/reference/#/p5/keyPressed');
   }
 };

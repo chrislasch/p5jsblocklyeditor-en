@@ -1,6 +1,6 @@
 // Pt 2021 - MIT-License
 
-//Kategorie: Grundformen
+//Category: Basic Shapes
 Blockly.Blocks['ellipse_var'] = {
   init: function() {
     this.appendDummyInput()
@@ -13,16 +13,16 @@ Blockly.Blocks['ellipse_var'] = {
         .appendField("y =");
     this.appendValueInput("breite")
         .setCheck("Number")
-        .appendField("| Breite =");
+        .appendField("| width ="); // was "| Breite ="
     this.appendValueInput("hoehe")
         .setCheck("Number")
-        .appendField("Höhe =");
+        .appendField("height ="); // was "Höhe ="
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
- this.setTooltip("Eine Ellipse zeichnen");
- this.setHelpUrl("https://p5js.org/reference/#/p5/ellipse");
+    this.setTooltip("Draw an ellipse"); // was "Eine Ellipse zeichnen"
+    this.setHelpUrl("https://p5js.org/reference/#/p5/ellipse");
   }
 };
 
@@ -38,7 +38,7 @@ Blockly.JavaScript['ellipse_var'] = function(block) {
 Blockly.Blocks['point_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Punkt");
+        .appendField("Point"); // was "Punkt"
     this.appendValueInput("x")
         .setCheck("Number")
         .appendField("x =");
@@ -49,8 +49,8 @@ Blockly.Blocks['point_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
- this.setTooltip("Einen Punkt zeichnen");
- this.setHelpUrl("https://p5js.org/reference/#/p5/point");
+    this.setTooltip("Draw a point"); // was "Einen Punkt zeichnen"
+    this.setHelpUrl("https://p5js.org/reference/#/p5/point");
   }
 };
 
@@ -64,7 +64,7 @@ Blockly.JavaScript['point_var'] = function(block) {
 Blockly.Blocks['line_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Linie");
+        .appendField("Line"); // was "Linie"
     this.appendValueInput("x1")
         .setCheck("Number")
         .appendField("x1 =");
@@ -81,7 +81,7 @@ Blockly.Blocks['line_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
-    this.setTooltip("Eine Linie zeichnen");
+    this.setTooltip("Draw a line"); // was "Eine Linie zeichnen"
     this.setHelpUrl("https://p5js.org/reference/#/p5/line");
   }
 };
@@ -98,7 +98,7 @@ Blockly.JavaScript['line_var'] = function(block) {
 Blockly.Blocks['triangle_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Dreieck");
+        .appendField("Triangle"); // was "Dreieck"
     this.appendValueInput("x1")
         .setCheck("Number")
         .appendField("x1 =");
@@ -121,7 +121,7 @@ Blockly.Blocks['triangle_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
-    this.setTooltip("Ein Dreieck zeichnen");
+    this.setTooltip("Draw a triangle"); // was "Ein Dreieck zeichnen"
     this.setHelpUrl("https://p5js.org/reference/#/p5/triangle");
   }
 };
@@ -140,7 +140,7 @@ Blockly.JavaScript['triangle_var'] = function(block) {
 Blockly.Blocks['rect_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Rechteck");
+        .appendField("Rectangle"); // was "Rechteck"
     this.appendValueInput("x")
         .setCheck("Number")
         .appendField("x =");
@@ -149,15 +149,15 @@ Blockly.Blocks['rect_var'] = {
         .appendField("y =");
     this.appendValueInput("breite")
         .setCheck("Number")
-        .appendField("| Breite =");
+        .appendField("| width ="); // was "| Breite ="
     this.appendValueInput("hoehe")
         .setCheck("Number")
-        .appendField("Höhe =");        
+        .appendField("height ="); // was "Höhe ="
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
-    this.setTooltip("Ein Rechteck zeichnen");
+    this.setTooltip("Draw a rectangle"); // was "Ein Rechteck zeichnen"
     this.setHelpUrl("https://p5js.org/reference/#/p5/rect");
   }
 };
@@ -174,14 +174,14 @@ Blockly.JavaScript['rect_var'] = function(block) {
 Blockly.Blocks['polygon'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Vieleck zeichnen:")
+        .appendField("Draw polygon:"); // was "Vieleck zeichnen:"
     this.appendStatementInput("vertices")
         .setCheck(null);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);        
     this.setColour(farbeVarGrundformen);
- this.setTooltip("Ein Vieleck zeichnen.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/endShape");
+    this.setTooltip("Draw a polygon."); // was "Ein Vieleck zeichnen."
+    this.setHelpUrl("https://p5js.org/reference/#/p5/endShape");
   }    
 };
 
@@ -204,7 +204,7 @@ Blockly.JavaScript['polygon'] = function(block) {
 Blockly.Blocks['vertex_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Vieleck: Eckpunkt");
+        .appendField("Polygon: vertex"); // was "Vieleck: Eckpunkt"
     this.appendValueInput("x")
         .setCheck("Number")
         .appendField("x =");
@@ -215,8 +215,8 @@ Blockly.Blocks['vertex_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
- this.setTooltip("Eine Ecke des Polygons festlegen.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/vertex");
+    this.setTooltip("Set a vertex of the polygon."); // was "Eine Ecke des Polygons festlegen."
+    this.setHelpUrl("https://p5js.org/reference/#/p5/vertex");
   }
 };
 
@@ -233,8 +233,8 @@ Blockly.Blocks['rgb_num'] = {
         .appendField(new Blockly.FieldNumber(0, 0, 255, 1), "rgbnum");
     this.setOutput(true, null);
     this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
 
@@ -250,8 +250,8 @@ Blockly.Blocks['winkel_num'] = {
         .appendField(new Blockly.FieldAngle(90), "winkel");
     this.setOutput(true, null);
     this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
 
@@ -264,17 +264,17 @@ Blockly.JavaScript['winkel_num'] = function(block) {
 Blockly.Blocks['p5_image_load'] = {
   init: function() {
     this.appendValueInput("imgVar")
-        .appendField("Bildvariable:");
+        .appendField("Image variable:"); // was "Bildvariable:"
     this.appendDummyInput()
-        .appendField(" | Bild im Base64-Format:");         
+        .appendField(" | Image in Base64 format:"); // was " | Bild im Base64-Format:"
     this.appendValueInput("imgString")
         .setCheck("String")        
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
- this.setTooltip("Das Bild muss im Base64-Format codiert werden. Konvertier-Tools gibt es Online.");
- this.setHelpUrl("");
+    this.setTooltip("The image must be encoded in Base64 format. There are online converter tools."); // was "Das Bild muss im Base64-Format codiert werden. Konvertier-Tools gibt es Online."
+    this.setHelpUrl("");
   }
 };
 
@@ -288,7 +288,7 @@ Blockly.JavaScript['p5_image_load'] = function(block) {
 Blockly.Blocks['p5_image_pos'] = {
   init: function() {
     this.appendValueInput("imgVar")
-        .appendField("Bildvariable:");
+        .appendField("Image variable:"); // was "Bildvariable:"
     this.appendValueInput("xKoord")
         .setCheck("Number")
         .appendField(" | Position: x =");
@@ -299,8 +299,8 @@ Blockly.Blocks['p5_image_pos'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeVarGrundformen);
- this.setTooltip("Ein Bild wird positioniert.");
- this.setHelpUrl("");
+    this.setTooltip("Position an image."); // was "Ein Bild wird positioniert."
+    this.setHelpUrl("");
   }
 };
 

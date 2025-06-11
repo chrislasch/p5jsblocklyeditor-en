@@ -3,7 +3,7 @@
 Blockly.Blocks['neue_turtle'] = {
   init: function() {
     this.appendValueInput("turtleVariable")
-        .appendField("Turtle einfügen:");      
+        .appendField("Insert Turtle:"); // was "Turtle einfügen:"
     this.appendDummyInput()
         .appendField("| x =")
         .appendField(new Blockly.FieldNumber(0, -maxKoord, maxKoord, 1), "xkoord")
@@ -13,8 +13,8 @@ Blockly.Blocks['neue_turtle'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Fügt eine Turtle in die Zeichenfläche ein.");
- this.setHelpUrl("");
+    this.setTooltip("Insert a turtle into the canvas."); // was "Fügt eine Turtle in die Zeichenfläche ein."
+    this.setHelpUrl("");
   }
 };
 
@@ -31,13 +31,13 @@ Blockly.Blocks['turtle_run'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");
     this.appendValueInput("runVariable")
-        .appendField("| Bewegung aufzeichnen:");
+        .appendField("| Record movement:"); // was "| Bewegung aufzeichnen:"
     this.setInputsInline(true);        
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Zeichnet die Bewegung der Turtle auf.");
- this.setHelpUrl("");
+    this.setTooltip("Records the movement of the turtle."); // was "Zeichnet die Bewegung der Turtle auf."
+    this.setHelpUrl("");
   }
 };
 
@@ -51,16 +51,16 @@ Blockly.JavaScript['turtle_run'] = function(block) {
 Blockly.Blocks['turtle_animate'] = {
   init: function() {
     this.appendValueInput("runVariable")
-        .appendField("Turtle: Animation starten");      
+        .appendField("Turtle: Start animation"); // was "Turtle: Animation starten"
     this.appendDummyInput()
-        .appendField("| Geschwindigkeit:")
+        .appendField("| Speed:") // was "| Geschwindigkeit:"
         .appendField(new Blockly.FieldNumber(1, 0, 100, 0.01), "speed");
     this.setInputsInline(true);          
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Spielt die Bewegung der Turtle ab.");
- this.setHelpUrl("");
+    this.setTooltip("Plays back the movement of the turtle."); // was "Spielt die Bewegung der Turtle ab."
+    this.setHelpUrl("");
   }
 };
 
@@ -76,13 +76,13 @@ Blockly.Blocks['turtle_pendown'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Stift runter");
+        .appendField("| Pen down"); // was "| Stift runter"
     this.setInputsInline(true);        
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Die Turtle zeichnet während ihrer Bewegung.");
- this.setHelpUrl("");
+    this.setTooltip("The turtle draws while moving."); // was "Die Turtle zeichnet während ihrer Bewegung."
+    this.setHelpUrl("");
   }
 };
 
@@ -97,13 +97,13 @@ Blockly.Blocks['turtle_penup'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Stift rauf");
+        .appendField("| Pen up"); // was "| Stift rauf"
     this.setInputsInline(true);        
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Die Turtle zeichnet nicht während ihrer Bewegung.");
- this.setHelpUrl("");
+    this.setTooltip("The turtle does not draw while moving."); // was "Die Turtle zeichnet nicht während ihrer Bewegung."
+    this.setHelpUrl("");
   }
 };
 
@@ -118,14 +118,14 @@ Blockly.Blocks['turtle_color_pick'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Malfarbe")
+        .appendField("| Pen color") // was "| Malfarbe"
         .appendField(new Blockly.FieldColour("#ff0000"), "farb_name");
     this.setInputsInline(true);        
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Malfarbe der Turtle festlegen.");
- this.setHelpUrl("");
+    this.setTooltip("Set the pen color of the turtle."); // was "Malfarbe der Turtle festlegen."
+    this.setHelpUrl("");
   }
 };
 
@@ -141,21 +141,21 @@ Blockly.Blocks['turtle_color_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Malfarbe");
+        .appendField("| Pen color"); // was "| Malfarbe"
     this.appendValueInput("r")
         .setCheck("Number")
-        .appendField("rot:");
+        .appendField("red:"); // was "rot:"
     this.appendValueInput("g")
         .setCheck("Number")
-        .appendField("grün:");
+        .appendField("green:"); // was "grün:"
     this.appendValueInput("b")
         .setCheck("Number")
-        .appendField("blau:");
+        .appendField("blue:"); // was "blau:"
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
-    this.setTooltip("Malfarbe der Turtle festlegen.");
+    this.setTooltip("Set the pen color of the turtle."); // was "Malfarbe der Turtle festlegen."
     this.setHelpUrl("");
   }
 };
@@ -174,24 +174,24 @@ Blockly.Blocks['turtle_color_t_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Malfarbe");
+        .appendField("| Pen color"); // was "| Malfarbe"
     this.appendValueInput("r")
         .setCheck("Number")
-        .appendField("rot:");
+        .appendField("red:"); // was "rot:"
     this.appendValueInput("g")
         .setCheck("Number")
-        .appendField("grün:");
+        .appendField("green:"); // was "grün:"
     this.appendValueInput("b")
         .setCheck("Number")
-        .appendField("blau:");
+        .appendField("blue:"); // was "blau:"
     this.appendValueInput("t")
         .setCheck("Number")
-        .appendField("Durchsichtigkeit:");         
+        .appendField("Transparency:"); // was "Durchsichtigkeit:"
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
-    this.setTooltip("Malfarbe der Turtle festlegen.");
+    this.setTooltip("Set the pen color of the turtle."); // was "Malfarbe der Turtle festlegen."
     this.setHelpUrl("");
   }
 };
@@ -211,7 +211,7 @@ Blockly.Blocks['turtle_forward_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Vorwärts");
+        .appendField("| Forward"); // was "| Vorwärts"
     this.appendValueInput("delta_forward")
         .setCheck("Number");
     this.appendDummyInput()
@@ -220,8 +220,8 @@ Blockly.Blocks['turtle_forward_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Turtle bewegt sich die angegebe Anzahl von Pixeln vorwärts.");
- this.setHelpUrl("");
+    this.setTooltip("Turtle moves forward by the given number of pixels."); // was "Turtle bewegt sich die angegebe Anzahl von Pixeln vorwärts."
+    this.setHelpUrl("");
   }
 };
 
@@ -237,7 +237,7 @@ Blockly.Blocks['turtle_back_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Rückwärts");
+        .appendField("| Backward"); // was "| Rückwärts"
     this.appendValueInput("delta_back")
         .setCheck("Number");
     this.appendDummyInput()
@@ -246,8 +246,8 @@ Blockly.Blocks['turtle_back_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Turtle bewegt sich die angegebe Anzahl von Pixeln rückwärts.");
- this.setHelpUrl("");
+    this.setTooltip("Turtle moves backward by the given number of pixels."); // was "Turtle bewegt sich die angegebe Anzahl von Pixeln rückwärts."
+    this.setHelpUrl("");
   }
 };
 
@@ -263,7 +263,7 @@ Blockly.Blocks['turtle_left_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Drehung nach links");
+        .appendField("| Turn left"); // was "| Drehung nach links"
     this.appendValueInput("delta_left")
         .setCheck("Number");
     this.setInputsInline(true);      
@@ -287,7 +287,7 @@ Blockly.Blocks['turtle_right_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");      
     this.appendDummyInput()
-        .appendField("| Drehung nach rechts")
+        .appendField("| Turn right") // was "| Drehung nach rechts"
     this.appendValueInput("delta_right")
         .setCheck("Number");
     this.setInputsInline(true);       
@@ -311,10 +311,10 @@ Blockly.Blocks['turtle_posx_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");    
     this.appendDummyInput()
-        .appendField("| x-Position");
+        .appendField("| x-position"); // was "| x-Position"
     this.setOutput(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Gibt die aktuelle x-Position der Turtle zurück.");
+ this.setTooltip("Returns the current x-position of the turtle."); // was "Gibt die aktuelle x-Position der Turtle zurück."
  this.setHelpUrl("");
   }
 };
@@ -330,10 +330,10 @@ Blockly.Blocks['turtle_posy_var'] = {
     this.appendValueInput("turtleVariable")
         .appendField("Turtle:");    
     this.appendDummyInput()
-        .appendField("| y-Position");
+        .appendField("| y-position"); // was "| y-Position"
     this.setOutput(true, null);
     this.setColour(farbeTurtle);
- this.setTooltip("Gibt die aktuelle y-Position der Turtle zurück.");
+ this.setTooltip("Returns the current y-position of the turtle."); // was "Gibt die aktuelle y-Position der Turtle zurück."
  this.setHelpUrl("");
   }
 };

@@ -2,7 +2,7 @@
 
 var p5jsBlocklyEditorToolbox = `
 <xml id="toolbox" style="display: none">
-    <category name="Schildkröte" colour="#006400">
+    <category name="Turtle" colour="#006400">
         <block type="neue_turtle">
           <value name="turtleVariable">
             <block type="variables_get">
@@ -162,7 +162,7 @@ var p5jsBlocklyEditorToolbox = `
           </value>           
         </block>           
     </category>     
-    <category name="Grundformen" colour="#e67e22">
+    <category name="Basic Shapes" colour="#e67e22">
       <block type="ellipse_var">
         <value name="x">
           <shadow type="math_number">
@@ -316,7 +316,7 @@ var p5jsBlocklyEditorToolbox = `
         </value>          
       </block>      
     </category>    
-    <category name="Aussehen" colour="#95a5a6">
+    <category name="Appearance" colour="#95a5a6">
       <block type="p5_color">
         <value name="r">
           <shadow type="rgb_num">
@@ -567,7 +567,7 @@ var p5jsBlocklyEditorToolbox = `
           </value>         
       </block>
     </category> 
-    <category name="Werte" colour="#2f7db7">
+    <category name="Values" colour="#2f7db7">
         <block type="p5key"></block>
         <block type="p5keyCode"></block>
         <block type="mousex"></block>
@@ -627,7 +627,7 @@ var p5jsBlocklyEditorToolbox = `
           </value>         
         </block>        
     </category>
-    <category name="p5-Helfer" colour="#da5a73">
+    <category name="p5-Helpers" colour="#da5a73">
         <block type="moduloframe"></block>
         <block type="framerate_number"></block>        
         <block type="p5_random">
@@ -698,7 +698,7 @@ var p5jsBlocklyEditorToolbox = `
           </value>         
       </block>
     </category>     
-    <category name="p5-Funktionen" colour="#ed225d">
+    <category name="p5-Functions" colour="#ed225d">
         <block type="setup">
           <value name="zeichenflaecheVariable">
               <block type="variables_get">
@@ -712,8 +712,8 @@ var p5jsBlocklyEditorToolbox = `
         <block type="keypressed"></block>
     </category>
     <sep></sep>
-    <category name="Variablen" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>    
-    <category name="Schleifen" colour="%{BKY_LOOPS_HUE}">
+    <category name="Variables" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>    
+    <category name="Loops" colour="%{BKY_LOOPS_HUE}">
         <block type="controls_repeat_ext">
             <value name="TIMES">
                 <shadow type="math_number">
@@ -741,14 +741,14 @@ var p5jsBlocklyEditorToolbox = `
         </block>
         <block type="controls_flow_statements"></block>
     </category>    
-    <category name="Logik" colour="%{BKY_LOGIC_HUE}">
+    <category name="Logic" colour="%{BKY_LOGIC_HUE}">
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
         <block type="logic_negate"></block>
         <block type="logic_boolean"></block>
     </category>
-    <category name="Mathematik" colour="%{BKY_MATH_HUE}">
+    <category name="Math" colour="%{BKY_MATH_HUE}">
         <block type="math_number"></block>
         <block type="math_arithmetic">
             <value name="A">
@@ -833,8 +833,8 @@ var p5jsBlocklyEditorToolbox = `
         </block>
     </category>
     <sep></sep>
-    <category name="js-Funktionen" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"></category>  
-    <category name="js-Liste" colour="%{BKY_LISTS_HUE}">
+    <category name="JS Functions" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"></category>  
+    <category name="JS List" colour="%{BKY_LISTS_HUE}">
       <block type="lists_create_with">
         <mutation items="0"></mutation>
       </block>
@@ -887,7 +887,7 @@ var p5jsBlocklyEditorToolbox = `
       <block type="lists_reverse"></block>
     </category> 
     <sep></sep> 
-    <category name="ADT Stapel" colour="#92967D">
+    <category name="ADT Stack" colour="#92967D">
       <block type="adt_stack_neu">
         <value name="stackVariable">
           <block type="variables_get">
@@ -936,7 +936,7 @@ var p5jsBlocklyEditorToolbox = `
         </value>           
       </block>       
     </category>
-    <category name="ADT Schlange" colour="#6E7C7C">
+    <category name="ADT Queue" colour="#6E7C7C">
       <block type="adt_queue_neu">
         <value name="queueVariable">
           <block type="variables_get">
@@ -985,7 +985,7 @@ var p5jsBlocklyEditorToolbox = `
         </value>           
       </block>       
     </category>    
-    <category name="ADT Dyn. Reihung" colour="#435560">
+    <category name="ADT Dyn. Array" colour="#435560">
       <block type="adt_dynArray_neu">
         <value name="dynArrayVariable">
           <block type="variables_get">

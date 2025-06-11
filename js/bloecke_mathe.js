@@ -3,14 +3,14 @@
 Blockly.Blocks['decToBin'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Ganzzahl in Binärzahl umrechnen:");
+        .appendField("Convert integer to binary:");
     this.appendValueInput("ganzZahl")
         .setCheck("Number");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbeMathe);
- this.setTooltip("Rechnet eine Dezimalzahl in eine Binärzahl um.");
- this.setHelpUrl("");
+    this.setTooltip("Converts a decimal number to a binary number.");
+    this.setHelpUrl("");
   }
 };
 
@@ -23,14 +23,14 @@ Blockly.JavaScript['decToBin'] = function(block) {
 Blockly.Blocks['binToDec'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Binärzahl in Ganzzahl umrechnen:");
+        .appendField("Convert binary to integer:");
     this.appendValueInput("binZahl")
         .setCheck("Number");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbeMathe);
- this.setTooltip("Rechnet eine Binärzahl in eine Ganzzahl um.");
- this.setHelpUrl("");
+    this.setTooltip("Converts a binary number to an integer.");
+    this.setHelpUrl("");
   }
 };
 
@@ -43,14 +43,14 @@ Blockly.JavaScript['binToDec'] = function(block) {
 Blockly.Blocks['decToHex'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Ganzzahl in Hexadezimalzahl umrechnen:");
+        .appendField("Convert integer to hexadecimal:");
     this.appendValueInput("ganzZahl")
         .setCheck("Number");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbeMathe);
- this.setTooltip("Rechnet eine Dezimalzahl in eine Hexadezimalzahl um.");
- this.setHelpUrl("");
+    this.setTooltip("Converts a decimal number to a hexadecimal number.");
+    this.setHelpUrl("");
   }
 };
 
@@ -63,14 +63,14 @@ Blockly.JavaScript['decToHex'] = function(block) {
 Blockly.Blocks['hexToDec'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Hexadezimalzahl in Ganzzahl umrechnen:");
+        .appendField("Convert hexadecimal to integer:");
     this.appendValueInput("hexZahl")
         .setCheck("String");    
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbeMathe);
- this.setTooltip("Rechnet eine Hexadezimalzahl in eine Ganzzahl um.");
- this.setHelpUrl("");
+    this.setTooltip("Converts a hexadecimal number to an integer.");
+    this.setHelpUrl("");
   }
 };
 

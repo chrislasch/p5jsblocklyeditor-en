@@ -1,20 +1,20 @@
 // Pt 2021 - MIT-License
 
-//Kategorie: p5-Helfer
+//Category: p5 Helpers
 Blockly.Blocks['moduloframe'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Nur alle")
+        .appendField("Only every")
         .appendField(new Blockly.FieldNumber(0, 1, 10000, 1), "modulonumber")
-        .appendField("Frames ausführen:");
+        .appendField("frames execute:");
     this.appendStatementInput("do")
         .setCheck(null);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Anweisungen werden nur nach einer bestimmten Anzahl von Frames ausgeführt.");
- this.setHelpUrl("");
+    this.setTooltip("Statements are only executed after a certain number of frames.");
+    this.setHelpUrl("");
   }
 };
 
@@ -28,13 +28,13 @@ Blockly.JavaScript['moduloframe'] = function(block) {
 Blockly.Blocks['framerate_number'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Frames pro Sekunde:")
+        .appendField("Frames per second:")
         .appendField(new Blockly.FieldNumber(0, 0, 100, 1), "framerate");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Legt die Bildwiederholrate fest.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/frameRate");
+    this.setTooltip("Sets the frame rate.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/frameRate");
   }
 };
 
@@ -47,17 +47,17 @@ Blockly.JavaScript['framerate_number'] = function(block) {
 Blockly.Blocks['p5_random'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Zufallszahl zwischen:");
+        .appendField("Random number between:");
     this.appendValueInput("z1")
         .setCheck("Number");
     this.appendValueInput("z2")
         .setCheck("Number")
-        .appendField("und");        
+        .appendField("and");        
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Liefert eine zufällige Dezimalzahl zwischen den angegebenen Grenzen.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/random");
+    this.setTooltip("Returns a random decimal number between the given bounds.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/random");
   }
 };
 
@@ -71,14 +71,14 @@ Blockly.JavaScript['p5_random'] = function(block) {
 Blockly.Blocks['p5_noise'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Noise-Zufallszahl:");
+        .appendField("Noise random number:");
     this.appendValueInput("input")
         .setCheck(null);
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Liefert eine Noise-Zufallszahl.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/random");
+    this.setTooltip("Returns a noise random number.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/random");
   }
 };
 
@@ -91,16 +91,16 @@ Blockly.JavaScript['p5_noise'] = function(block) {
 Blockly.Blocks['push_pop'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("push - neuer Zeichnenstatus");
+        .appendField("push - new drawing state");
     this.appendStatementInput("do")
         .setCheck(null);
     this.appendDummyInput()
-        .appendField("pop - Status beenden");
+        .appendField("pop - end state");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Alle Änderungen gelten nur in diesem Block");
- this.setHelpUrl("https://p5js.org/reference/#/p5/push");
+    this.setTooltip("All changes only apply within this block");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/push");
   }
 };
 
@@ -113,19 +113,19 @@ Blockly.JavaScript['push_pop'] = function(block) {
 Blockly.Blocks['translate_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Verschieben");
+        .appendField("Translate");
     this.appendValueInput("deltaX")
         .setCheck("Number")
-        .appendField("in x-Richtung um:");
+        .appendField("in x-direction by:");
     this.appendValueInput("deltaY")
         .setCheck("Number")
-        .appendField("in y-Richtung um:");
+        .appendField("in y-direction by:");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Verschiebt alle folgenden Objekte um die angegebene Zahl von Pixeln.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/translate");
+    this.setTooltip("Moves all following objects by the given number of pixels.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/translate");
   }
 };
 
@@ -139,16 +139,16 @@ Blockly.JavaScript['translate_var'] = function(block) {
 Blockly.Blocks['rotate_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Drehung");
+        .appendField("Rotate");
     this.appendValueInput("winkel")
         .setCheck("Number")
-        .appendField("um Winkel:");
+        .appendField("by angle:");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Rotiert alle folgenden Objekte um den angegebenen Winkel gegen den Uhrzeigersinn (Gradmaß).");
- this.setHelpUrl("https://p5js.org/reference/#/p5/rotate");
+    this.setTooltip("Rotates all following objects by the given angle counterclockwise (degrees).");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/rotate");
   }
 };
 
@@ -161,16 +161,16 @@ Blockly.JavaScript['rotate_var'] = function(block) {
 Blockly.Blocks['scale_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Vergrößerung");
+        .appendField("Scale");
     this.appendValueInput("faktor")
         .setCheck("Number")
-        .appendField("um:");
+        .appendField("by:");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Vergrößert alle folgenden Objekte um den angegebenen Faktor.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/scale");
+    this.setTooltip("Scales all following objects by the given factor.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/scale");
   }
 };
 
@@ -186,8 +186,8 @@ Blockly.Blocks['p5_button'] = {
     this.appendValueInput("buttonVariable")
         .appendField("Button: ");    
     this.appendDummyInput()
-        .appendField("| Beschriftung: ")
-        .appendField(new Blockly.FieldTextInput("beschriftung1"), "beschriftung")
+        .appendField("| Label: ")
+        .appendField(new Blockly.FieldTextInput("label1"), "beschriftung")
     this.appendValueInput("xKoord")
         .setCheck("Number")
         .appendField("| x =");
@@ -196,18 +196,18 @@ Blockly.Blocks['p5_button'] = {
         .appendField("y =");
     this.appendValueInput("breite")
         .setCheck("Number")
-        .appendField("| Breite:");
+        .appendField("| Width:");
     this.appendDummyInput()
-        .appendField("| Methode: ")
-        .appendField(new Blockly.FieldTextInput("methode1"), "methodenaufruf")
+        .appendField("| Method: ")
+        .appendField(new Blockly.FieldTextInput("method1"), "methodenaufruf")
     this.appendValueInput("zeichenflaecheVariable")
         .appendField("|");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbep5Helfer);
- this.setTooltip("Button zum Aufruf einer Methode.");
- this.setHelpUrl("");
+    this.setTooltip("Button to call a method.");
+    this.setHelpUrl("");
   }
 };
 
@@ -219,6 +219,6 @@ Blockly.JavaScript['p5_button'] = function(block) {
   var value_methodenaufruf = block.getFieldValue('methodenaufruf');
   var value_beschriftung = block.getFieldValue('beschriftung');  
   var value_canvasvarName = Blockly.JavaScript.valueToCode(block, 'zeichenflaecheVariable', Blockly.JavaScript.ORDER_ATOMIC);   
-  var code = value_buttonVariable + ' = p5sketch.createButton("' + value_beschriftung + '");\n' + value_buttonVariable + '.position(' + value_canvasvarName + '.position().x+' + value_xkoord + ', ' + value_canvasvarName + '.position().y+' + value_ykoord + ');\n' + value_buttonVariable + '.size(' + value_breite + ');\n' + value_buttonVariable + '.class(\"btn btn-secondary btn-sm\");\n' + value_buttonVariable + '.mousePressed(' + value_methodenaufruf + ');\n';
+  var code = value_buttonVariable + ' = p5sketch.createButton("' + value_beschriftung + '");\n' + value_buttonVariable + '.position(' + value_canvasvarName + '.position().x+' + value_xkoord + ', ' + value_canvasvarName + '.position().y+' + value_ykoord + ');\n' + value_buttonVariable + '.size(' + value_breite + ');\n' + value_buttonVariable + '.class("btn btn-secondary btn-sm");\n' + value_buttonVariable + '.mousePressed(' + value_methodenaufruf + ');\n';
   return code;
 };

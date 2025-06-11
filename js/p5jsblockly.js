@@ -78,11 +78,11 @@ var onresize = function(e) {
     blocklyDiv.style.left = x + 'px';
     blocklyDiv.style.top = y + 'px';
     blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
-    let p5Hoehe = canvasHeight+100;
-    if (blocklyArea.offsetHeight > p5Hoehe) {
-    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+    let p5Height = canvasHeight+100;
+    if (blocklyArea.offsetHeight > p5Height) {
+      blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
     } else {
-      blocklyDiv.style.height = p5Hoehe + 'px';
+      blocklyDiv.style.height = p5Height + 'px';
     } 
     Blockly.svgResize(workspace);
 };
@@ -129,12 +129,12 @@ function updateP5() {
     } catch (e) { 
         $('#loggerDiv').removeClass('alert alert-light').addClass('alert alert-danger');
         $("#loggerDiv").css("max-width", "400px");
-        let text01 = '<strong>Im Code gibt es einen Fehler:<\/strong><br><br>' + e.toString() + '<hr>Mit \"rechter Maustaste - Rückgängig\" können die letzten Änderungen zurückgenommen werden.'
+        let text01 = '<strong>There is an error in the code:<\/strong><br><br>' + e.toString() + '<hr>You can undo the last changes with "right mouse button - Undo".'
         document.getElementById('loggerDiv').innerHTML = text01;        
     }
-    let linksProzent = (canvasWidth+25)/$(window).width() * 100;
-    let rechtsProzent = 100-linksProzent;
-    splitInstance.setSizes([linksProzent, rechtsProzent]);
+    let leftPercent = (canvasWidth+25)/$(window).width() * 100;
+    let rightPercent = 100-leftPercent;
+    splitInstance.setSizes([leftPercent, rightPercent]);
     onresize();
     Blockly.svgResize(workspace);
 }
@@ -143,7 +143,7 @@ function viewFlems() {
     let codeInstance = Blockly.JavaScript.workspaceToCode(workspace);
     let code = codeInstance.replaceAll("p5sketch.", "");
     let codeToSave = code.replaceAll("p5sketch, ", "");
-    //dreifache neue Zeile ersetzen
+    // Replace triple newlines
     codeToSave = codeToSave.replace(/\n\s*\n\s*\n/g, '\n\n');
     if(!codeToSave.includes('new p5();')) {
       codeToSave = codeToSave + '\nnew p5();';
@@ -156,7 +156,7 @@ function viewCode() {
     let codeInstance = Blockly.JavaScript.workspaceToCode(workspace);
     let code1 = codeInstance.replaceAll("p5sketch.", "");    
     let code = code1.replaceAll("p5sketch, ", "");
-    //dreifache neue Zeile ersetzen
+    // Replace triple newlines
     code = code.replace(/\n\s*\n\s*\n/g, '\n\n');   
     let codeDiv = document.getElementById('codeDiv');
     let htmlImport = Prism.highlight(code, Prism.languages.javascript, 'javascript');
@@ -170,14 +170,14 @@ function p5Init() {
         try {
             let triggerCode = urlString.substring(0, 4);
             if (triggerCode == "#LZ=") {
-              let comressedCode = urlString.substring(4);
-              let string = LZString.decompressFromEncodedURIComponent(comressedCode);
+              let compressedCode = urlString.substring(4);
+              let string = LZString.decompressFromEncodedURIComponent(compressedCode);
               let xml = Blockly.Xml.textToDom(string);
               Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);              
             }
             if (triggerCode == "#PN=") {
-              let programmName = urlString.substring(4);
-              loadBeispielProgramm('programme/' + programmName + '.p5xml');
+              let programName = urlString.substring(4);
+              loadBeispielProgramm('programme/' + programName + '.p5xml');
             }
         }
         catch {
@@ -186,11 +186,11 @@ function p5Init() {
     } else {
         Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'), workspace);
     }
-    let p5jsBreite = 0.3*$(window).width();
-    let breite1 = "width: " + p5jsBreite + "px";
-    let breite2 = p5jsBreite + "px";
-    document.getElementById('p5jsContainer').setAttribute("style", breite1);
-    document.getElementById('p5jsContainer').style.width = breite2;
+    let p5jsWidth = 0.3*$(window).width();
+    let width1 = "width: " + p5jsWidth + "px";
+    let width2 = p5jsWidth + "px";
+    document.getElementById('p5jsContainer').setAttribute("style", width1);
+    document.getElementById('p5jsContainer').style.width = width2;
     onresize();
     viewCode();
     updateP5();
