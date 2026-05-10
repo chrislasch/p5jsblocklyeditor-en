@@ -1,176 +1,231 @@
-<h4><i class="bi bi-easel"></i>&nbsp;K1.7a: Lücken in der Spur</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.7a: Gaps in the Trail</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Frames und die Maus</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Mit der Maus kann man etwas auf die Zeichenfläche malen, indem man als Koordinaten für einen Kreis die x- und y-Koordinate der Maus einträgt. Der Computer stellt einmal pro Frame fest, wo sich die Maus gerade befindet und malt dorthin einen Kreis.</p>
-        <p>Wenn man die Maus langsam bewegt, kann man eine lückenlose Linie malen. Wenn man die Maus schnell bewegt, dann entstehen Lücken in der Linie, da sich die Koordinaten der Maus zu schnell ändern.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_01b.jpg">
-      </li>
-      <li class="list-group-item">
-        <p>Mit folgendem Programm kannst du das selbst ausprobieren:</p>
-      </li> 
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_01.jpg">
-      </li>
-    </ul>
+  <div class="card-header">Frames and the Mouse</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        With the mouse, you can paint something on the drawing area by entering
+        the x and y coordinates of the mouse as coordinates for a circle. The
+        computer determines once per frame where the mouse is currently located
+        and paints a circle there.
+      </p>
+      <p>
+        If you move the mouse slowly, you can paint a continuous line. If you
+        move the mouse quickly, gaps appear in the line because the mouse
+        coordinates change too quickly.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_01b.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>With the following program you can try this yourself:</p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_01.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_07_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Lücken in der Linie</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_07_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Gaps in the Line
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('k1_07_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_07_01.p5xml');
-};
+  document.getElementById("k1_07_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_07_01.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.7b: Linie ohne Lücken</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.7b: Line Without Gaps</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Neue und alte Mausposition</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Eine lückenlose Linie kann man zeichnen, wenn man anstelle eines Kreises eine Linie zeichnet und mit dieser die alte Mausposition im letzten Frame und die neue Mausposition im aktuellen Frame verbindet.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_02a.jpg">
-      </li> 
-      <li class="list-group-item">
-          <p>Die Koordinaten der Maus im letzten Frame sind in den Blöcken "Maus: vorige x-Koordinate" und "Maus: vorige y-Koordinate" gespeichert.</p>
-      </li>      
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_02.jpg">
-      </li> 
-    </ul>
+  <div class="card-header">New and Old Mouse Position</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        A continuous line can be drawn if you draw a line instead of a circle
+        and use it to connect the old mouse position in the last frame and the
+        new mouse position in the current frame.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_02a.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        The mouse coordinates in the last frame are stored in the blocks "Mouse:
+        previous x-coordinate" and "Mouse: previous y-coordinate".
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_02.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_07_bsp02" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Alte und neue Mausposition verbinden</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_07_bsp02" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Connect Old and New Mouse
+        Position
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_07_bsp02').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_07_02.p5xml');
-};
+  document.getElementById("k1_07_bsp02").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_07_02.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.7c: Veränderliche Liniendicke</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.7c: Variable Line Thickness</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Liniendicke abhängig von der Mausgeschwindigkeit</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Kreatives Programmieren macht Spaß, wenn man interessante Effekte in seine Programme einbaut. Im folgenden Beispiel wird die Liniendicke abhängig von der Mausgeschwindigkeit geändert.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_03a.jpg">
-      </li> 
-      <li class="list-group-item">
-          <p>Das erreicht man, indem die Liniendicke als Entfernung zwischen der alten und der neuen Mausposition berechnet wird.</p>
-          <p>Wenn man die Maus langsam bewegt, dann ist diese Entfernung klein und die Liniendicke auch klein. Wenn man die Maus schnell bewegt, ist diese Entfernung groß und die Linie wird dicker.</p>
-      </li> 
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_03.jpg">
-      </li>       
-    </ul>
+  <div class="card-header">Line Thickness Depending on Mouse Speed</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        Creative programming is fun when you build interesting effects into your
+        programs. In the following example, the line thickness is changed
+        depending on the mouse speed.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_03a.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        This is achieved by calculating the line thickness as the distance
+        between the old and new mouse position.
+      </p>
+      <p>
+        If you move the mouse slowly, this distance is small and the line
+        thickness is also small. If you move the mouse quickly, this distance is
+        large and the line becomes thicker.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_03.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_07_bsp03" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Dicke und dünne Linie</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_07_bsp03" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Thick and Thin Line
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_07_bsp03').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_07_03.p5xml');
-};
+  document.getElementById("k1_07_bsp03").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_07_03.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.7d: Animierte Linie</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.7d: Animated Line</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Die Linie folgt der Maus</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Kreatives Programmieren macht noch mehr Spaß, wenn die Effekte spektakulärer werden.</p>
-          <p>Leider ist das oft mit einer komplizierten Logik verbunden, die viel Mathematik enthält. Mit dem folgenden Programm erreicht man es, dass die gezeichnete Linie der Maus mit zeitlicher Verzögerung folgt. Damit erreicht man ein spannendes Zeichengefühl.</p>
-          <p>Das Programm dazu enthält viele Variablen, mit denen intensiv gerechnet wird und insgesamt schwer verständlich ist. Du musst es nicht verstehen.</p>
-          <p><small><b>Quelle:</b> Getting started with p5.js, Maker Media 2016, S. 67</small></p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_04.jpg">
-      </li>       
-    </ul>
+  <div class="card-header">The Line Follows the Mouse</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        Creative programming becomes even more fun when the effects become more
+        spectacular.
+      </p>
+      <p>
+        Unfortunately, this is often associated with complicated logic that
+        contains a lot of mathematics. With the following program, you achieve
+        that the drawn line follows the mouse with a time delay. This creates an
+        exciting drawing feeling.
+      </p>
+      <p>
+        The program for this contains many variables with which intensive
+        calculations are made and is overall difficult to understand. You don't
+        have to understand it.
+      </p>
+      <p>
+        <small
+          ><b>Source:</b> Getting started with p5.js, Maker Media 2016, p.
+          67</small
+        >
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_04.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_07_bsp04" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Zeitverzögerte Linie</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_07_bsp04" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Time-Delayed Line
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_07_bsp04').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_07_04.p5xml');
-};
+  document.getElementById("k1_07_bsp04").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_07_04.p5xml");
+  };
 </script>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Bunte Linie</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_07_05a.jpg">
-      </li>       
-    </ul>
+  <div class="card-header">Colorful Line</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_07_05a.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_07_bsp05" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Bunte Linie</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_07_bsp05" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Colorful Line
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_07_bsp05').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_07_05.p5xml');
-};
+  document.getElementById("k1_07_bsp05").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_07_05.p5xml");
+  };
 </script>

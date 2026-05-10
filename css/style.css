@@ -1,36 +1,66 @@
+html,
 body {
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Prevents flexbox overflow issues */
+}
+.main-content > .container-fluid {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
+.logo-section {
+  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+/* Remove or override previous #blocklyArea height if present */
 #blocklyArea {
-    height: calc(100vh - 100px);
-    width: 100%;
+  height: 100%;
 }
 
 #blocklyDiv {
-    position: absolute;
+  position: absolute;
 }
 
 div#blocklyDiv .blocklyToolboxDiv {
-    background: #ecf0f1;
+  background: #ecf0f1;
 }
 
 .split {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .gutter {
-    background-color: #eee;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    z-index: 100;
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  z-index: 100;
 }
 
 .gutter.gutter-horizontal {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
-    cursor: col-resize;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+  cursor: col-resize;
 }
 
 .offcanvas {
@@ -40,24 +70,30 @@ div#blocklyDiv .blocklyToolboxDiv {
 .wrap {
   background-color: #fafafa;
   padding: 20px;
-  white-space: pre-wrap;      /* CSS3 */   
-  white-space: -moz-pre-wrap; /* Firefox */    
-  white-space: -pre-wrap;     /* Opera <7 */   
-  white-space: -o-pre-wrap;   /* Opera 7 */    
-  word-wrap: break-word;      /* IE */
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
 }
 
 /* Abstand in der Toolbox zwischen Farbe und Text ändern */
 .blocklyTreeIcon {
-    width: 3px;
+  width: 3px;
 }
 
 /* Schriftfarbe der Kategorie ändern */
 .blocklyTreeLabel {
-    color: #555;
+  color: #555;
 }
 
 /* Hover-Hintergrund ändern */
 .blocklyToolboxCategory:hover {
-    background-color: #ddd;
+  background-color: #ddd;
+}
+
+.cloud-weaving-title {
+  font-family: "Helvetica Neue", sans-serif; /* Or any font you want */
+  font-weight: medium; /* Optional: makes it bold */
+  font-size: 1.5rem; /* Optional: change size */
 }

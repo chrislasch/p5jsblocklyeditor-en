@@ -1,78 +1,108 @@
-<h4><i class="bi bi-easel"></i>&nbsp;K1.5a: Variable Eigenschaften</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.5a: Variable Properties</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Eine Variable festlegen</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Es sollen 4 Kreise gezeichnet werden. Dazu baut man folgendes Programm:</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_05_01.jpg">
-      </li>
-      <li class="list-group-item">
-        <p>Jetzt soll der Durchmesser der 4 Kreise geändert werden. Dazu müssten 8 Zahlen geändert werden. Das ist mühsam.</p>
-        <p>Leichter wäre es, wenn man einen Platzhalter (Variable) in die Felder für "Breite" und "Höhe" einsetzt und dieser Variablen einen Wert zuordnet. Wenn man später den Durchmesser ändern will, muss man nur eine einzige Stelle im Programm ändern.</p>
-        <p>Um diese Variable festzulegen, klickt man auf die Kategorie "Variablen" und dort auf "Variable erstellen ...". Im Dialog gibt man den Namen "durchmesser" ein und sollte dann folgendes sehen:</p>        
-      </li>  
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_05_03.jpg">
-      </li>
-      <li class="list-group-item">
-        <p>Der Block "setze durchmesser auf" wird an den Anfang des Blocks "setup()" gesetzt und die Zahl 100 angehängt und der Block "durchmesser" wird in die freien Felder eingebaut:</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_05_04.jpg">
-      </li>
-      <li class="list-group-item">
-        <p>Jetzt kann man den Durchmesser der Kreise leicht ändern, indem man die Zahl beim Block "setze durchmesser auf ..." ändert.</p>
-      </li>      
-    </ul>
+  <div class="card-header">Define a Variable</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        4 circles should be drawn. To do this, you build the following program:
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_05_01.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        Now the diameter of the 4 circles should be changed. To do this, 8
+        numbers would have to be changed. That's tedious.
+      </p>
+      <p>
+        It would be easier if you put a placeholder (variable) in the fields for
+        "Width" and "Height" and assign a value to this variable. If you later
+        want to change the diameter, you only need to change one place in the
+        program.
+      </p>
+      <p>
+        To define this variable, you click on the "Variables" category and there
+        on "Create variable ...". In the dialog, you enter the name "diameter"
+        and should then see the following:
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_05_03.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        The block "set diameter to" is placed at the beginning of the "setup()"
+        block and the number 100 is attached and the "diameter" block is built
+        into the empty fields:
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_05_04.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        Now you can easily change the diameter of the circles by changing the
+        number at the "set diameter to ..." block.
+      </p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_05_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Variabler Durchmesser</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_05_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Variable Diameter
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('k1_05_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_05_01.p5xml');
-};
+  document.getElementById("k1_05_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_05_01.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.5b: Zufalls-Durchmesser</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.5b: Random Diameter</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Variable und Zufallsgenerator</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Man kann den Durchmesser auch mit einem Zufallsgenerator verändern lassen. Da sich jetzt ständig Werte während des Programmablaufs ändern sollen, brauchen wir wieder den Block "draw()", der im folgenden Programm 20 Mal pro Sekunde durchlaufen wird.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_05_05.jpg">
-      </li> 
-    </ul>
+  <div class="card-header">Variable and Random Generator</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        You can also let the diameter change with a random generator. Since
+        values should now constantly change during program execution, we need
+        the "draw()" block again, which will be executed 20 times per second in
+        the following program.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_05_05.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_05_bsp02" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Zufalls-Durchmesser</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_05_bsp02" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Random Diameter
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_05_bsp02').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_05_02.p5xml');
-};
+  document.getElementById("k1_05_bsp02").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_05_02.p5xml");
+  };
 </script>

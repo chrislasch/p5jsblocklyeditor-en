@@ -163,28 +163,7 @@ var p5jsBlocklyEditorToolbox = `
         </block>           
     </category>     
     <category name="Basic Shapes" colour="#e67e22">
-      <block type="ellipse_var">
-        <value name="x">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-        <value name="y">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value> 
-        <value name="breite">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value> 
-        <value name="hoehe">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>         
-      </block>
+
       <block type="point_var">
         <value name="x">
           <shadow type="math_number">
@@ -219,6 +198,60 @@ var p5jsBlocklyEditorToolbox = `
           </shadow>
         </value>         
       </block>
+            <block type="ellipse_var">
+        <value name="x">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="y">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value> 
+        <value name="breite">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value> 
+        <value name="hoehe">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>         
+      </block>
+      <block type="arc_var">
+  <value name="x">
+    <shadow type="math_number">
+      <field name="NUM">0</field>
+    </shadow>
+  </value>
+  <value name="y">
+    <shadow type="math_number">
+      <field name="NUM">0</field>
+    </shadow>
+  </value>
+  <value name="breite">
+    <shadow type="math_number">
+      <field name="NUM">100</field>
+    </shadow>
+  </value>
+  <value name="hoehe">
+    <shadow type="math_number">
+      <field name="NUM">100</field>
+    </shadow>
+  </value>
+  <value name="start">
+    <shadow type="math_number">
+      <field name="NUM">0</field>
+    </shadow>
+  </value>
+  <value name="stop">
+    <shadow type="math_number">
+      <field name="NUM">3.14</field>
+    </shadow>
+  </value>
+</block>
       <block type="triangle_var">
         <value name="x1">
           <shadow type="math_number">
@@ -664,11 +697,16 @@ var p5jsBlocklyEditorToolbox = `
           </value>         
         </block>
         <block type="scale_var">
-          <value name="faktor">
-            <shadow type="math_number">
-              <field name="NUM">0</field>
-            </shadow>
-          </value>          
+  <value name="scaleX">
+    <shadow type="math_number">
+      <field name="NUM">1</field>
+    </shadow>
+  </value>
+  <value name="scaleY">
+    <shadow type="math_number">
+      <field name="NUM">1</field>
+    </shadow>
+  </value>           
         </block>
       <block type="p5_button">
         <value name="buttonVariable">
@@ -886,7 +924,14 @@ var p5jsBlocklyEditorToolbox = `
       <block type="lists_sort"></block>
       <block type="lists_reverse"></block>
     </category> 
-    <sep></sep> 
+   
+    
+    </xml>
+`;
+
+//REMOVE ADT AND OOP CATEGORIES FOR NOW
+/* 
+ <sep></sep> 
     <category name="ADT Stack" colour="#92967D">
       <block type="adt_stack_neu">
         <value name="stackVariable">
@@ -984,8 +1029,8 @@ var p5jsBlocklyEditorToolbox = `
           </block>
         </value>           
       </block>       
-    </category>    
-    <category name="ADT Dyn. Array" colour="#435560">
+    </category>       
+<category name="ADT Dyn. Array" colour="#435560">
       <block type="adt_dynArray_neu">
         <value name="dynArrayVariable">
           <block type="variables_get">
@@ -1179,5 +1224,13 @@ var p5jsBlocklyEditorToolbox = `
         <block type="objekt_wert"></block>
         <block type="attribut_aendern"></block>
     </category>      
-    </xml>
-`
+
+
+    !!!!!UPDATED FILE!!!!
+      !!!!!UPDATED FILE!!!!
+        !!!!!UPDATED FILE!!!!
+          !!!!!UPDATED FILE!!!!
+            !!!!!UPDATED FILE!!!!
+              !!!!!UPDATED FILE!!!!
+                !!!!!UPDATED FILE!!!!
+    */

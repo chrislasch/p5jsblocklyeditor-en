@@ -1,124 +1,159 @@
-<h4><i class="bi bi-easel"></i>&nbsp;S1.6 - Spiralen</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;S1.6 - Spirals</h4>
 
 <div class="card mb-3">
-  <div class="card-header">Vorlage laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_06_bsp00" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Schildkröte malt ein Quadrat</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Template:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_06_bsp00" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Turtle Draws a Square
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_06_bsp00').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_06_00.p5xml');
-};
+  document.getElementById("s1_06_bsp00").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_06_00.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Eine Spirale</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Die Schildkröte soll eine Spirale zeichnen. Eine Spirale sieht z.B. wie folgt aus:</p>
-        <p><img src="tutorials/turtle1/s1_06_01a.jpg"></p>
-        <p>Wenn man die Spirale betrachtet, fällt auf, dass die Strecke, welche die Schildkröte vorwärts geht, nach jeder Richtungsänderung länger wird. Der Richtungswinkel ist 45° groß. Das soll der Schildkröte jetzt beigebracht werden.</p>
-        <p>Im Programm wird eine Variable "streckenlaenge" festgelegt, welche nach jeder Richtungsänderung erhöht wird. Dazu klickt man in der Kategorie "Variablen" auf "Variable erstellen..." und nennt die neue Variable z.B. "streckenlaenge".</p>
-        <p>In das Programm wird der Block "setze streckenlaenge auf" eingefügt und mit dem Wert 0 ergänzt</p>
-        <p>Die Wiederholungsschleife wird 150 mal wiederholt und der Drehwinkel wird auf 45° gesetzt.</p>
-        <p>Das Programm sieht dann wie folgt aus:</p>
-        <p><img src="tutorials/turtle1/s1_06_01.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>A Spiral</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        The turtle should draw a spiral. A spiral looks like this, for example:
+      </p>
+      <p><img src="tutorials/turtle1/s1_06_01a.jpg" /></p>
+      <p>
+        When you look at the spiral, you notice that the distance the turtle
+        moves forward becomes longer after each direction change. The direction
+        angle is 45°. This should now be taught to the turtle.
+      </p>
+      <p>
+        In the program, a variable "lineLength" is defined, which is increased
+        after each direction change. To do this, click on "Create variable..."
+        in the "Variables" category and name the new variable e.g. "lineLength".
+      </p>
+      <p>
+        The "set lineLength to" block is inserted into the program and
+        supplemented with the value 0
+      </p>
+      <p>
+        The repeat loop is repeated 150 times and the rotation angle is set to
+        45°.
+      </p>
+      <p>The program then looks like this:</p>
+      <p><img src="tutorials/turtle1/s1_06_01.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_06_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Spirale zeichnen</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_06_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Draw Spiral
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_06_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_06_01.p5xml');
-};
+  document.getElementById("s1_06_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_06_01.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Eine bunte Spirale</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Die Spirale soll etwas bunter werden:</p>
-        <p><img src="tutorials/turtle1/s1_06_02a.jpg"></p>
-        <p>Dazu fügt man den Block "Malfarbe" mit dem RGB-Code ein und lässt einen Zufallsgenerator die Farbe zufällig festlegen.</p>
-        <p><img src="tutorials/turtle1/s1_06_02b.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>A Colorful Spiral</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>The spiral should become a bit more colorful:</p>
+      <p><img src="tutorials/turtle1/s1_06_02a.jpg" /></p>
+      <p>
+        To do this, insert the "Pen Color" block with the RGB code and let a
+        random generator randomly determine the color.
+      </p>
+      <p><img src="tutorials/turtle1/s1_06_02b.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_06_bsp02" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Bunte Spirale zeichnen</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_06_bsp02" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Draw Colorful Spiral
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_06_bsp02').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_06_02.p5xml');
-};
+  document.getElementById("s1_06_bsp02").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_06_02.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Richtungswinkel kleiner als 45°</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Wenn man einen Richtungswinkel wählt, der kleiner als 45° ist, dann wird der Abstand zwischen den Spiralarmen größer:</p>
-        <p><img src="tutorials/turtle1/s1_06_03a.jpg"></p>
-        <p><img src="tutorials/turtle1/s1_06_03b.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Direction Angle Less Than 45°</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        If you choose a direction angle that is less than 45°, then the distance
+        between the spiral arms becomes larger:
+      </p>
+      <p><img src="tutorials/turtle1/s1_06_03a.jpg" /></p>
+      <p><img src="tutorials/turtle1/s1_06_03b.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Richtungswinkel größer als 45°</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Wenn man einen Richtungswinkel wählt, der größer als 45° ist, dann liegen die Spiralarme übereinander:</p>
-        <p><img src="tutorials/turtle1/s1_06_04a.jpg"></p>
-        <p><img src="tutorials/turtle1/s1_06_04b.jpg"></p>
-        <p><img src="tutorials/turtle1/s1_06_04c.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Direction Angle Greater Than 45°</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        If you choose a direction angle that is greater than 45°, then the
+        spiral arms lie on top of each other:
+      </p>
+      <p><img src="tutorials/turtle1/s1_06_04a.jpg" /></p>
+      <p><img src="tutorials/turtle1/s1_06_04b.jpg" /></p>
+      <p><img src="tutorials/turtle1/s1_06_04c.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Richtungswinkel gleich 120°</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Bei einem Richtungswinkel von 120° ist die Spirale dreiecksförmig. Hier kann man auch die Änderung der Streckenlänge verändern. Auch die Änderung der Liniendicke verändert die entstehende Spirale. Einfach ausprobieren.</p>
-        <p><img src="tutorials/turtle1/s1_06_05a.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Direction Angle Equal to 120°</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        With a direction angle of 120°, the spiral is triangular. Here you can
+        also change the change in line length. Changing the line thickness also
+        changes the resulting spiral. Just try it out.
+      </p>
+      <p><img src="tutorials/turtle1/s1_06_05a.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Richtungswinkel zwischen 135° und 180°</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Bei Richtungswinkeln zwischen 135° und 180° entstehen Sterne:</p>
-        <p><img src="tutorials/turtle1/s1_06_06a.jpg"></p>
-        <p><img src="tutorials/turtle1/s1_06_06b.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Direction Angle Between 135° and 180°</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>With direction angles between 135° and 180°, stars are created:</p>
+      <p><img src="tutorials/turtle1/s1_06_06a.jpg" /></p>
+      <p><img src="tutorials/turtle1/s1_06_06b.jpg" /></p>
+    </li>
+  </ul>
 </div>

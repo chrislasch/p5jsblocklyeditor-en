@@ -1,68 +1,105 @@
-<h4><i class="bi bi-easel"></i>&nbsp;Tutorial: Das erste Programm</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;Tutorial: The First Program</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Zeichenfläche anlegen</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p><b>Lösche</b> alle vorhandenen Blöcke, indem du die vorhandenen Blöcke auf die Werkzeugleiste oder den Mülleimer ziehst.</p>
-          <p><img src="tutorials/ersteschritte/t_01_01a.jpg"></p>
-      </li>
-      <li class="list-group-item">
-          <p>Der Block "setup()" muss in jedem Programm vorhanden sein.</p>
-          <p><b>Ziehe</b> den Block "setup()" aus der Kategorie "p5-Funktionen" in den Editor. <b>Gib</b> die gewünschte Breite (z.B. 300) und Höhe (z.B. 400) der Zeichenfläche in Pixeln an.</p>
-          <p><img src="tutorials/ersteschritte/t_01_01b.jpg"></p>
-      </li>
-      <li class="list-group-item">
-          <p>Der Zeichenbereich soll mit einer Farbe eingefärbt werden.</p>
-          <p><b>Ziehe</b> dazu den oberen Block "Hintergrundfarbe" aus der Kategorie "Aussehen" in den Editor und <b>suche</b> dir eine Farbe aus, indem du auf das Farbfeld hinter "Hintergrundfarbe" klickst.</p>
-          <p><img src="tutorials/ersteschritte/t_01_01c.jpg"></p>
-      </li>
-      <li class="list-group-item">
-          <p><b>Klicke</b> auf die Schaltfläche "Code ausführen" und eine Zeichenfläche in der von dir gewählten Größe und Farbe wird angelegt.</p>
-          <p><img src="tutorials/ersteschritte/t_01_01d.jpg"></p>
-      </li>
-      <li class="list-group-item">
-        <p>Das kürzest mögliche Programm im p5.js-Blockly-Editor sieht wie folgt aus:</p>
-        <p><img src="tutorials/ersteschritte/t_01_01.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Create Canvas</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        <b>Delete</b> all existing blocks by dragging the existing blocks to the
+        toolbar or trash.
+      </p>
+      <p><img src="tutorials/ersteschritte/t_01_01a.jpg" /></p>
+    </li>
+    <li class="list-group-item">
+      <p>The "setup()" block must be present in every program.</p>
+      <p>
+        <b>Drag</b> the "setup()" block from the "p5-Functions" category into
+        the editor. <b>Enter</b> the desired width (e.g., 300) and height (e.g.,
+        400) of the canvas in pixels.
+      </p>
+      <p><img src="tutorials/ersteschritte/t_01_01b.jpg" /></p>
+    </li>
+    <li class="list-group-item">
+      <p>The drawing area should be colored with a color.</p>
+      <p>
+        <b>Drag</b> the top "Background Color" block from the "Appearance"
+        category into the editor and <b>choose</b> a color by clicking on the
+        color field behind "Background Color".
+      </p>
+      <p><img src="tutorials/ersteschritte/t_01_01c.jpg" /></p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        <b>Click</b> on the "Execute Code" button and a canvas in your chosen
+        size and color will be created.
+      </p>
+      <p><img src="tutorials/ersteschritte/t_01_01d.jpg" /></p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        The shortest possible program in the p5.js-Blockly-Editor looks like
+        this:
+      </p>
+      <p><img src="tutorials/ersteschritte/t_01_01.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header"><b>Figur zeichnen</b></div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Eine Figur wird mit p5.js gezeichnet, indem man zuerst das Aussehen der Figur (Füllfarbe, Linienfarbe und Liniendicke) festlegt und dann die Figur an einer bestimmten Stelle in der Zeichenfläche mit einer bestimmten Größe zeichnet.</p>
-        <p><b>Füge</b> aus der Kategorie "Aussehen" folgende Blöcke ein und suche dir jeweils eine Farbe aus:</p>
-        <p><img src="tutorials/ersteschritte/t_01_02a.jpg"></p>
-        <p>Gezeichnet wird noch nichts, da die Figur noch fehlt.</p>
-      </li>
-      <li class="list-group-item">
-        <p><b>Füge</b> aus der Kategorie "Grundformen" den Block "Ellipse" ein.</p>
-        <p><img src="tutorials/ersteschritte/t_01_02b.jpg"></p>
-        <p><b>Gib</b> bei "x =" den Wert 150 und bei "y =" den Wert 100 ein. Für "Breite" und "Höhe" gib jeweils den Wert 60 ein.</p>
-        <p><img src="tutorials/ersteschritte/t_01_02c.jpg"></p>
-        <p>Es wird ein Kreis gezeichnet, da Breite und Höhe der Ellipse gleich sind. Die Mitte des Kreises wird 150 Pixel entfernt vom linken Rand und 100 Pixel entfernt vom oberen Rand gezeichnet.</p>
-      </li>      
-      <li class="list-group-item">
-        <p><b>Vervollständige</b> das Programm wie folgt:</p>
-        <p><img src="tutorials/ersteschritte/t_01_02.jpg"></p>
-        <p>Die obere linke Ecke des Rechtecks wird 100 Pixel entfernt vom linken Rand und 160 Pixel entfernt vom oberen Rand gezeichnet. Von dort aus wird das Rechteck nach rechts und nach unten gezeichnet.</p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Draw Figure</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        A figure is drawn with p5.js by first setting the appearance of the
+        figure (fill color, line color, and line thickness) and then drawing the
+        figure at a specific location in the canvas with a specific size.
+      </p>
+      <p>
+        <b>Add</b> the following blocks from the "Appearance" category and
+        choose a color for each:
+      </p>
+      <p><img src="tutorials/ersteschritte/t_01_02a.jpg" /></p>
+      <p>Nothing is drawn yet because the figure is still missing.</p>
+    </li>
+    <li class="list-group-item">
+      <p><b>Add</b> the "Ellipse" block from the "Basic Shapes" category.</p>
+      <p><img src="tutorials/ersteschritte/t_01_02b.jpg" /></p>
+      <p>
+        <b>Enter</b> the value 150 for "x =" and the value 100 for "y =". For
+        "Width" and "Height" enter the value 60 each.
+      </p>
+      <p><img src="tutorials/ersteschritte/t_01_02c.jpg" /></p>
+      <p>
+        A circle is drawn because the width and height of the ellipse are equal.
+        The center of the circle is drawn 150 pixels from the left edge and 100
+        pixels from the top edge.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p><b>Complete</b> the program as follows:</p>
+      <p><img src="tutorials/ersteschritte/t_01_02.jpg" /></p>
+      <p>
+        The top left corner of the rectangle is drawn 100 pixels from the left
+        edge and 160 pixels from the top edge. From there, the rectangle is
+        drawn to the right and down.
+      </p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="t_01_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Figur zeichnen</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="t_01_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Draw Figure
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('t_01_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/ersteschritte/t_01.p5xml');
-};
+  document.getElementById("t_01_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/ersteschritte/t_01.p5xml");
+  };
 </script>
