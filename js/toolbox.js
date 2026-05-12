@@ -161,6 +161,30 @@ var p5jsBlocklyEditorToolbox = `
             </block>
           </value>           
         </block>           
+    </category>
+    <category name="Basket Grid" colour="#8B5A2B">
+      <block type="basket_set_grid">
+        <field name="rings">12</field>
+        <field name="columns">48</field>
+        <field name="symmetry">8</field>
+      </block>
+      <block type="basket_show_grid"></block>
+      <block type="basket_hide_grid"></block>
+      <block type="basket_set_fill_color">
+        <field name="farbe">#000000</field>
+      </block>
+      <block type="basket_move_right"></block>
+      <block type="basket_move_left"></block>
+      <block type="basket_move_up"></block>
+      <block type="basket_move_down"></block>
+      <block type="basket_fill"></block>
+      <block type="basket_move_fill_right"></block>
+      <block type="basket_move_fill_left"></block>
+      <block type="basket_move_fill_up"></block>
+      <block type="basket_move_fill_down"></block>
+      <block type="basket_animate">
+        <field name="step_ms">150</field>
+      </block>
     </category>     
     <category name="Basic Shapes" colour="#e67e22">
 

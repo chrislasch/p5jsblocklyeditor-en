@@ -8,9 +8,9 @@ Blockly.Blocks['setup'] = {
     this.appendValueInput("zeichenflaecheVariable")
     this.appendDummyInput()
         .appendField("Width =")
-        .appendField(new Blockly.FieldNumber(startWidth, 0, maxKoord, 1), "canvasBreite")
+        .appendField(new Blockly.FieldNumber(800, 0, maxKoord, 1), "canvasBreite")
         .appendField("Height =")
-        .appendField(new Blockly.FieldNumber(startWidth, 0, maxKoord, 1), "canvasHoehe");
+        .appendField(new Blockly.FieldNumber(800, 0, maxKoord, 1), "canvasHoehe");
     this.setInputsInline(true);         
     this.appendStatementInput("do")
         .setCheck(null);
