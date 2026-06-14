@@ -173,6 +173,7 @@ var p5jsBlocklyEditorToolbox = `
       <block type="basket_set_fill_color">
         <field name="farbe">#000000</field>
       </block>
+      <block type="basket_wrap_edges"></block>
       <block type="basket_move_right"></block>
       <block type="basket_move_left"></block>
       <block type="basket_move_up"></block>
