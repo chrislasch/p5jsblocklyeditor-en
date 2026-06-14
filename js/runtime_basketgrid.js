@@ -16,6 +16,7 @@ var BasketGrid = (function () {
       fillColor: "#000000",
       backgroundColor: "#ffffff",
       gridVisible: true,
+      wrapEdges: true,
       cursor: {
         ring: 0,
         localCol: 0,
@@ -328,14 +329,26 @@ var BasketGrid = (function () {
       s.cursor.ring -= 1;
     }
 
-    s.cursor.localCol = clamp(s.cursor.localCol, 0, s.localCols - 1);
-    s.cursor.ring = clamp(s.cursor.ring, 0, s.rings - 1);
+    if (s.wrapEdges) {
+      s.cursor.localCol =
+        ((s.cursor.localCol % s.localCols) + s.localCols) % s.localCols;
+      s.cursor.ring = ((s.cursor.ring % s.rings) + s.rings) % s.rings;
+    } else {
+      s.cursor.localCol = clamp(s.cursor.localCol, 0, s.localCols - 1);
+      s.cursor.ring = clamp(s.cursor.ring, 0, s.rings - 1);
+    }
     render(p5sketch);
   }
 
   function applyMoveAndFill(p5sketch, direction) {
     applyMove(p5sketch, direction);
     applyFillCell(p5sketch);
+  }
+
+  function applySetWrapEdges(p5sketch, enabled) {
+    var s = ensureState();
+    s.wrapEdges = !!enabled;
+    render(p5sketch);
   }
 
   function applyRecordedCommand(p5sketch, command) {
@@ -359,6 +372,8 @@ var BasketGrid = (function () {
       applyFillCell(p5sketch);
     } else if (command.type === "moveAndFill") {
       applyMoveAndFill(p5sketch, command.direction);
+    } else if (command.type === "setWrapEdges") {
+      applySetWrapEdges(p5sketch, command.enabled);
     }
   }
 
@@ -393,6 +408,11 @@ var BasketGrid = (function () {
     setFillColor: function (p5sketch, colorString) {
       applySetFillColor(p5sketch, colorString);
       recordCommand({ type: "setFillColor", color: colorString });
+    },
+
+    setWrapEdges: function (p5sketch, enabled) {
+      applySetWrapEdges(p5sketch, enabled);
+      recordCommand({ type: "setWrapEdges", enabled: !!enabled });
     },
 
     fillCell: function (p5sketch) {
