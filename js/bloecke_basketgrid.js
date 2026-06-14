@@ -89,21 +89,21 @@ Blockly.JavaScript["basket_set_fill_color"] = function (block) {
 Blockly.Blocks["basket_wrap_edges"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("Stop at edges")
-      .appendField(new Blockly.FieldCheckbox("FALSE"), "stopAtEdges");
+      .appendField("Wrap edges")
+      .appendField(new Blockly.FieldCheckbox("FALSE"), "wrapOff");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeBasket);
     this.setTooltip(
-      "Cursor wrapping is on by default. Check to stop at grid edges instead."
+      "Edge wrapping is on by default. Check to turn off wrapping."
     );
     this.setHelpUrl("");
   },
 };
 
 Blockly.JavaScript["basket_wrap_edges"] = function (block) {
-  var stopAtEdges = block.getFieldValue("stopAtEdges") === "TRUE";
-  return "BasketGrid.setWrapEdges(p5sketch, " + !stopAtEdges + ");\n";
+  var wrapOff = block.getFieldValue("wrapOff") === "TRUE";
+  return "BasketGrid.setWrapEdges(p5sketch, " + !wrapOff + ");\n";
 };
 
 Blockly.Blocks["basket_animate"] = {
