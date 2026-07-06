@@ -75,7 +75,8 @@ var BasketGrid = (function () {
     s.wedgeAngleDeg = 360 / s.symmetry;
     // Keep the active wedge centered at the top (-90 degrees).
     s.wedgeStartDeg = -90 - s.wedgeAngleDeg / 2;
-    s.ringWidth = s.radius / s.rings;
+    // Reserve one extra inner ring as an empty center ring.
+    s.ringWidth = s.radius / (s.rings + 1);
     s.colAngleDeg = s.wedgeAngleDeg / s.localCols;
   }
 
@@ -88,8 +89,9 @@ var BasketGrid = (function () {
     strokeWeight
   ) {
     var s = ensureState();
-    var innerR = ringIdx * s.ringWidth;
-    var outerR = (ringIdx + 1) * s.ringWidth;
+    // Logical ring 0 starts at the second physical ring from the center.
+    var innerR = (ringIdx + 1) * s.ringWidth;
+    var outerR = (ringIdx + 2) * s.ringWidth;
     var a1 = s.wedgeStartDeg + localColIdx * s.colAngleDeg;
     var a2 = a1 + s.colAngleDeg;
 
@@ -165,46 +167,75 @@ var BasketGrid = (function () {
     p5sketch.push();
     p5sketch.translate(s.centerX, s.centerY);
 
-    // Highlight the active wedge.
-    p5sketch.noStroke();
-    p5sketch.fill(0, 0, 0, 18);
-    p5sketch.arc(
-      0,
-      0,
-      2 * s.radius,
-      2 * s.radius,
-      s.wedgeStartDeg,
-      s.wedgeStartDeg + s.wedgeAngleDeg,
-      p5sketch.PIE
-    );
+    // Dim everything except the active wedge so the drawing area stays in focus.
+    (function drawOutsideWedgeWash() {
+      var ctx = p5sketch.drawingContext;
+      var wedgeStartRad = p5sketch.radians(s.wedgeStartDeg);
+      var wedgeEndRad = p5sketch.radians(s.wedgeStartDeg + s.wedgeAngleDeg);
+      var innerRadius = s.ringWidth;
+      var startOuterX = Math.cos(wedgeStartRad) * s.radius;
+      var startOuterY = Math.sin(wedgeStartRad) * s.radius;
+      var endInnerX = Math.cos(wedgeEndRad) * innerRadius;
+      var endInnerY = Math.sin(wedgeEndRad) * innerRadius;
+
+      ctx.save();
+      ctx.beginPath();
+      // Outer disk.
+      ctx.arc(0, 0, s.radius, 0, Math.PI * 2, false);
+      // Active wedge cutout (starts outside the empty center ring).
+      ctx.moveTo(startOuterX, startOuterY);
+      ctx.arc(0, 0, s.radius, wedgeStartRad, wedgeEndRad, false);
+      ctx.lineTo(endInnerX, endInnerY);
+      ctx.arc(0, 0, innerRadius, wedgeEndRad, wedgeStartRad, true);
+      ctx.closePath();
+      // Fade toward the current background instead of tinting with gray/black.
+      var bg = p5sketch.color(s.backgroundColor || "#ffffff");
+      var washR = Math.round(p5sketch.red(bg));
+      var washG = Math.round(p5sketch.green(bg));
+      var washB = Math.round(p5sketch.blue(bg));
+      ctx.fillStyle =
+        "rgba(" + washR + ", " + washG + ", " + washB + ", 0.33)";
+      ctx.fill("evenodd");
+      ctx.restore();
+    })();
 
     // Concentric rings.
     p5sketch.noFill();
     p5sketch.stroke(0, 0, 0, 35);
     p5sketch.strokeWeight(1);
-    for (i = 1; i <= s.rings; i++) {
+    for (i = 1; i <= s.rings + 1; i++) {
       var r = i * s.ringWidth;
       p5sketch.ellipse(0, 0, 2 * r, 2 * r);
     }
 
     // Full-grid spokes.
     p5sketch.stroke(0, 0, 0, 28);
+    var innerRadius = s.ringWidth;
     for (i = 0; i < s.columns; i++) {
       var angle = s.wedgeStartDeg + i * (360 / s.columns);
-      var x = p5sketch.cos(angle) * s.radius;
-      var y = p5sketch.sin(angle) * s.radius;
-      p5sketch.line(0, 0, x, y);
+      var xInner = p5sketch.cos(angle) * innerRadius;
+      var yInner = p5sketch.sin(angle) * innerRadius;
+      var xOuter = p5sketch.cos(angle) * s.radius;
+      var yOuter = p5sketch.sin(angle) * s.radius;
+      p5sketch.line(xInner, yInner, xOuter, yOuter);
     }
 
-    // Active wedge boundary.
-    p5sketch.stroke(0, 0, 0, 90);
+    // Symmetry guide boundaries (dashed red): active wedge strong, others faded.
     p5sketch.strokeWeight(2);
-    var x1 = p5sketch.cos(s.wedgeStartDeg) * s.radius;
-    var y1 = p5sketch.sin(s.wedgeStartDeg) * s.radius;
-    var x2 = p5sketch.cos(s.wedgeStartDeg + s.wedgeAngleDeg) * s.radius;
-    var y2 = p5sketch.sin(s.wedgeStartDeg + s.wedgeAngleDeg) * s.radius;
-    p5sketch.line(0, 0, x1, y1);
-    p5sketch.line(0, 0, x2, y2);
+    p5sketch.drawingContext.setLineDash([8, 6]);
+    for (i = 0; i < s.symmetry; i++) {
+      var boundaryAngle = s.wedgeStartDeg + i * s.wedgeAngleDeg;
+      var boundaryX = p5sketch.cos(boundaryAngle) * s.radius;
+      var boundaryY = p5sketch.sin(boundaryAngle) * s.radius;
+      // 80% red for the active wedge borders; faded red elsewhere.
+      if (i === 0 || i === 1) {
+        p5sketch.stroke(255, 0, 0, 204);
+      } else {
+        p5sketch.stroke(255, 0, 0, 70);
+      }
+      p5sketch.line(0, 0, boundaryX, boundaryY);
+    }
+    p5sketch.drawingContext.setLineDash([]);
 
     // Center marker.
     p5sketch.noStroke();
@@ -216,7 +247,7 @@ var BasketGrid = (function () {
 
   function drawCursor(p5sketch) {
     var s = ensureState();
-    var centerRadius = (s.cursor.ring + 0.5) * s.ringWidth;
+    var centerRadius = (s.cursor.ring + 1.5) * s.ringWidth;
     var centerAngle =
       s.wedgeStartDeg + (s.cursor.localCol + 0.5) * s.colAngleDeg;
     var x = p5sketch.cos(centerAngle) * centerRadius;
@@ -224,9 +255,11 @@ var BasketGrid = (function () {
 
     p5sketch.push();
     p5sketch.translate(s.centerX, s.centerY);
+    p5sketch.translate(x, y);
+    p5sketch.rotate(30);
     p5sketch.noStroke();
     p5sketch.fill("#FFD400");
-    p5sketch.circle(x, y, 10);
+    p5sketch.triangle(0, -5, 4.5, 4, -4.5, 4);
     p5sketch.pop();
   }
 
@@ -251,20 +284,18 @@ var BasketGrid = (function () {
     s.filled = {};
   }
 
-  function applySetGrid(p5sketch, rings, columns, symmetry, backgroundColor) {
+  function applySetGrid(
+    p5sketch,
+    rings,
+    columnsPerWedge,
+    symmetry,
+    backgroundColor
+  ) {
     var s = ensureState();
     var nextRings = Math.max(1, parseInt(rings, 10) || 1);
-    var nextColumns = Math.max(1, parseInt(columns, 10) || 1);
+    var nextLocalCols = Math.max(1, parseInt(columnsPerWedge, 10) || 1);
     var nextSymmetry = Math.max(1, parseInt(symmetry, 10) || 1);
-    var localColsRaw = nextColumns / nextSymmetry;
-    var nextLocalCols = Math.max(1, Math.floor(localColsRaw));
-
-    if (Math.abs(localColsRaw - Math.round(localColsRaw)) > 0.000001) {
-      console.warn(
-        "BasketGrid: columns should be divisible by symmetry. Using local columns:",
-        nextLocalCols
-      );
-    }
+    var nextColumns = nextLocalCols * nextSymmetry;
 
     s.rings = nextRings;
     s.columns = nextColumns;
@@ -307,6 +338,23 @@ var BasketGrid = (function () {
   function applySetFillColor(p5sketch, colorString) {
     var s = ensureState();
     s.fillColor = colorString;
+    render(p5sketch);
+  }
+
+  function applySetStart(p5sketch, ring, localCol) {
+    var s = ensureState();
+    var nextRing = parseInt(ring, 10);
+    var nextLocalCol = parseInt(localCol, 10);
+
+    if (isNaN(nextRing)) {
+      nextRing = 0;
+    }
+    if (isNaN(nextLocalCol)) {
+      nextLocalCol = 0;
+    }
+
+    s.cursor.ring = clamp(nextRing, 0, s.rings - 1);
+    s.cursor.localCol = clamp(nextLocalCol, 0, s.localCols - 1);
     render(p5sketch);
   }
 
@@ -366,6 +414,8 @@ var BasketGrid = (function () {
       applyHideGrid(p5sketch);
     } else if (command.type === "setFillColor") {
       applySetFillColor(p5sketch, command.color);
+    } else if (command.type === "setStart") {
+      applySetStart(p5sketch, command.ring, command.localCol);
     } else if (command.type === "move") {
       applyMove(p5sketch, command.direction);
     } else if (command.type === "fillCell") {
@@ -378,16 +428,16 @@ var BasketGrid = (function () {
   }
 
   return {
-    setGrid: function (p5sketch, rings, columns, symmetry) {
+    setGrid: function (p5sketch, rings, columnsPerWedge, symmetry) {
       var s = ensureState();
       stopReplayTimer();
-      applySetGrid(p5sketch, rings, columns, symmetry);
+      applySetGrid(p5sketch, rings, columnsPerWedge, symmetry);
       if (!s.suppressHistory) {
         s.history = [
           {
             type: "setGrid",
             rings: rings,
-            columns: columns,
+            columns: columnsPerWedge,
             symmetry: symmetry,
             backgroundColor: s.backgroundColor,
           },
@@ -408,6 +458,15 @@ var BasketGrid = (function () {
     setFillColor: function (p5sketch, colorString) {
       applySetFillColor(p5sketch, colorString);
       recordCommand({ type: "setFillColor", color: colorString });
+    },
+
+    setStart: function (p5sketch, ring, localCol) {
+      applySetStart(p5sketch, ring, localCol);
+      recordCommand({
+        type: "setStart",
+        ring: parseInt(ring, 10) || 0,
+        localCol: parseInt(localCol, 10) || 0,
+      });
     },
 
     setWrapEdges: function (p5sketch, enabled) {

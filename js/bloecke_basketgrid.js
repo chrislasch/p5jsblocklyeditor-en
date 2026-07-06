@@ -8,16 +8,16 @@ Blockly.Blocks["basket_set_grid"] = {
       .appendField("Set polar grid")
       .appendField("rings")
       .appendField(new Blockly.FieldNumber(12, 1, 200, 1), "rings")
-      .appendField("columns")
-      .appendField(new Blockly.FieldNumber(48, 1, 360, 1), "columns")
+      .appendField("wedge columns")
+      .appendField(new Blockly.FieldNumber(6, 1, 360, 1), "columns")
       .appendField("symmetry")
-      .appendField(new Blockly.FieldNumber(8, 1, 360, 1), "symmetry");
+      .appendField(new Blockly.FieldNumber(5, 1, 360, 1), "symmetry");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeBasket);
     this.setTooltip(
-      "Sets rings, full columns, and symmetry for one programmable wedge."
+      "Sets rings, columns per wedge, and symmetry. The center ring stays empty. Total columns = wedge columns x symmetry."
     );
     this.setHelpUrl("");
   },
@@ -84,6 +84,31 @@ Blockly.Blocks["basket_set_fill_color"] = {
 Blockly.JavaScript["basket_set_fill_color"] = function (block) {
   var color = block.getFieldValue("farbe");
   return 'BasketGrid.setFillColor(p5sketch, "' + color + '");\n';
+};
+
+Blockly.Blocks["basket_set_start"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Start here")
+      .appendField("ring")
+      .appendField(new Blockly.FieldNumber(1, 1, 999, 1), "ring")
+      .appendField("stitch")
+      .appendField(new Blockly.FieldNumber(1, 1, 999, 1), "column");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(farbeBasket);
+    this.setTooltip(
+      "Sets the start position for the basket cursor (ring and stitch are 1-based)."
+    );
+    this.setHelpUrl("");
+  },
+};
+
+Blockly.JavaScript["basket_set_start"] = function (block) {
+  var ring = Math.max(0, parseInt(block.getFieldValue("ring"), 10) - 1);
+  var column = Math.max(0, parseInt(block.getFieldValue("column"), 10) - 1);
+  return "BasketGrid.setStart(p5sketch, " + ring + ", " + column + ");\n";
 };
 
 Blockly.Blocks["basket_wrap_edges"] = {
