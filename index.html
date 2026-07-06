@@ -7,9 +7,16 @@
     <title>p5.js-Blockly-Editor</title>
 
     <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="lib/prism/prism.css" rel="stylesheet" />
+    <link href="css/theme.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/p5js/p5.min.js"></script>
@@ -51,196 +58,186 @@
         <variables
           ><variable id="ndzEdR{9MHk^Bb2-x;Mx">canvas</variable></variables
         ><block type="setup" id="3VVNR;H8H.Yd_[q)}flY" x="30" y="30"
-          ><field name="canvasBreite">800</field
-          ><field name="canvasHoehe">800</field
+          ><field name="canvasBreite">640</field
+          ><field name="canvasHoehe">640</field
           ><value name="zeichenflaecheVariable"
             ><block type="variables_get" id="+qvgn#;JFEH?(Us^l__6"
               ><field name="VAR" id="ndzEdR{9MHk^Bb2-x;Mx">canvas</field></block
             ></value
           ><statement name="do"
             ><block type="background_pick" id="Ki5L9A,]MYF#73l!~LfD"
-              ><field name="farbe">#33ccff</field></block
+              ><field name="farbe">#f4f1ea</field></block
             ></statement
           ></block
         ><block type="draw" id="Ha%@Ajt-O?4M~Wy.f_]E" x="30" y="110"></block
       ></xml>
 
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light pt-1">
-        <div class="container-fluid">
-          <form class="d-flex">
-            <div class="navbar-brand cloud-weaving-title">
-              Cloud Weaving Canvas
+      <!-- Workspace Toolbar -->
+      <nav class="app-toolbar navbar" aria-label="Primary workspace toolbar">
+        <div class="toolbar-inner">
+          <div class="brand-lockup navbar-brand cloud-weaving-title">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-copy">
+              <span class="brand-title">Cloud Weaving Canvas</span>
+              <span class="brand-subtitle">p5.js + Blockly studio</span>
+            </span>
+          </div>
+
+          <div class="toolbar-cluster" role="group" aria-label="Sketch controls">
+            <button
+              id="p5Run"
+              type="button"
+              class="btn app-btn app-btn-primary"
+              title="Run code (Ctrl/Command + Enter)"
+            >
+              <i class="bi bi-play-fill"></i>
+              <span>Run</span>
+            </button>
+            <button
+              id="p5loeschen"
+              type="button"
+              class="btn app-btn app-btn-secondary"
+            >
+              <i class="bi bi-arrow-clockwise"></i>
+              <span>Clear</span>
+            </button>
+          </div>
+
+          <div class="toolbar-divider" aria-hidden="true"></div>
+
+          <div class="toolbar-cluster" role="group" aria-label="Code views">
+            <button
+              id="jsAnzeigen"
+              type="button"
+              class="btn app-btn app-btn-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#JavaScriptModal"
+            >
+              <i class="bi bi-code-square"></i>
+              <span>JavaScript</span>
+            </button>
+            <button
+              id="flemsAnzeigen"
+              type="button"
+              class="btn app-btn app-btn-secondary"
+            >
+              <i class="bi bi-file-text"></i>
+              <span>Text Editor</span>
+            </button>
+          </div>
+
+          <div class="toolbar-spacer"></div>
+
+          <div class="save-cluster" aria-label="Program file controls">
+            <div class="input-group input-group-sm">
+              <input
+                id="p5saveDateiname"
+                type="text"
+                class="form-control"
+                placeholder="Filename"
+                aria-label="Filename"
+                aria-describedby="p5Save"
+              />
+              <button id="p5Save" class="btn app-btn app-btn-secondary" type="button">
+                <i class="bi bi-download"></i>
+                <span>Save</span>
+              </button>
             </div>
-          </form>
-          <form class="d-flex">
-            <div class="btn-group btn-group-sm" role="group" aria-label="navi1">
-              <!-- Navbar buttons -->
-              <button
-                id="jsAnzeigen"
-                type="button"
-                class="btn btn-outline-secondary"
-                data-bs-toggle="modal"
-                data-bs-target="#JavaScriptModal"
-              >
-                <i class="bi bi-code-square"></i>&nbsp;&nbsp;JavaScript Code
-              </button>
-              <button id="flemsAnzeigen" class="btn btn-outline-secondary">
-                <i class="bi bi-file-text"></i>&nbsp;&nbsp;Text Editor
-              </button>
-              <button id="traceAnzeigen" class="btn btn-outline-secondary">
-                <i class="bi bi-file-text"></i>&nbsp;&nbsp;Trace Editor
-              </button>
-            </div>
-          </form>
-          <form class="d-flex">
-            <div class="btn-group btn-group-sm" role="group" aria-label="navi2">
-              <button
-                id="HilfeAnzeigen"
-                type="button"
-                class="btn btn-outline-secondary btn-sm"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#HilfeOffCanvas"
-                aria-controls="HilfeOffCanvas"
-              >
-                <i class="bi bi-question-circle"></i>
-                <!-- Help button, icon only -->
-              </button>
-              <button
-                id="InfoAnzeigen"
-                type="button"
-                class="btn btn-outline-secondary btn-sm"
-                data-bs-toggle="modal"
-                data-bs-target="#InfoModal"
-              >
-                <i class="bi bi-info-circle"></i>
-                <!-- Info button, icon only -->
-              </button>
-            </div>
-          </form>
+            <label class="btn app-btn app-btn-secondary">
+              <i class="bi bi-upload"></i>
+              <span>Load</span>
+              <input type="file" accept=".p5xml" id="p5Dateiwahl" hidden />
+            </label>
+          </div>
+
+          <div class="toolbar-cluster icon-cluster" role="group" aria-label="Help and information">
+            <button
+              id="HilfeAnzeigen"
+              type="button"
+              class="btn app-btn app-btn-icon"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#HilfeOffCanvas"
+              aria-controls="HilfeOffCanvas"
+              aria-label="Open tutorials"
+              title="Open tutorials"
+            >
+              <i class="bi bi-question-circle"></i>
+            </button>
+            <button
+              id="InfoAnzeigen"
+              type="button"
+              class="btn app-btn app-btn-icon"
+              data-bs-toggle="modal"
+              data-bs-target="#InfoModal"
+              aria-label="About this editor"
+              title="About this editor"
+            >
+              <i class="bi bi-info-circle"></i>
+            </button>
+          </div>
         </div>
       </nav>
 
       <!-- Preview-Editor -->
-      <div class="container-fluid">
+      <div class="workspace-shell container-fluid">
         <div class="split">
-          <div id="split-0">
-            <div class="row ml-10">
-              <div class="container-fluid">
-                <div id="p5jsContainer">
-                  <div class="d-flex justify-content-center">
-                    <div
-                      class="spinner-border text-secondary m-5"
-                      role="status"
-                    >
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
-                  </div>
+          <section id="split-0" class="stage-panel" aria-label="Sketch preview">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Preview</p>
+                <h1>Sketch canvas</h1>
+              </div>
+              <div class="shortcut-hint" aria-label="Run shortcut">
+                <span>Ctrl</span><span>Enter</span>
+              </div>
+            </div>
+            <div class="canvas-stage">
+              <div id="p5jsContainer" class="canvas-frame">
+                <div class="loading-state" role="status">
+                  <span class="loading-orb" aria-hidden="true"></span>
+                  <span>Preparing creative workspace...</span>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="container-fluid" style="min-width: 350px">
-                <!-- Preview-Editor controls -->
-                <button id="p5Run" class="btn btn-sm btn-outline-primary">
-                  <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Run Code
-                </button>
-                <button id="p5loeschen" class="btn btn-sm btn-outline-primary">
-                  <i class="bi bi-arrow-clockwise"></i>&nbsp;&nbsp;Clear Program
-                </button>
+            <div
+              id="loggerDiv"
+              class="alert alert-light status-log"
+              role="alert"
+              aria-live="polite"
+            ></div>
+          </section>
+          <section id="split-1" class="blockly-panel" aria-label="Blockly editor">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Build</p>
+                <h2>Block workspace</h2>
               </div>
+              <p class="panel-note">Drag blocks to compose your sketch.</p>
             </div>
-            <div class="row">
-              <div class="container-fluid">
-                <div
-                  id="loggerDiv"
-                  class="alert alert-light"
-                  role="alert"
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div id="split-1">
             <div id="blocklyArea">
               <div id="blocklyDiv"></div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
+      <footer class="credits-strip" aria-label="Funder credits">
+        <span>Supported in part by</span>
+        <div class="credits-logos">
+          <span class="sponsor-logo sponsor-logo--nea" role="img" aria-label="NEA Logo">
+            <img class="sponsor-logo__base" src="NEAlogo.png" alt="" aria-hidden="true" />
+            <img class="sponsor-logo__accent" src="NEAlogo.png" alt="" aria-hidden="true" />
+          </span>
+          <span class="sponsor-logo sponsor-logo--genart" role="img" aria-label="The Generative Art Fund Logo">
+            <img class="sponsor-logo__base" src="GENARTlogo.png" alt="" aria-hidden="true" />
+            <img class="sponsor-logo__accent" src="GENARTlogo.png" alt="" aria-hidden="true" />
+          </span>
+          <span class="sponsor-logo sponsor-logo--hdr" role="img" aria-label="HDR Logo">
+            <img class="sponsor-logo__base" src="HDRlogo.png" alt="" aria-hidden="true" />
+          </span>
+        </div>
+      </footer>
     </div>
-    <nav
-      class="footer-section navbar navbar-expand-lg navbar-light bg-light pt-2"
-    >
-      <div class="container-fluid">
-        <form class="d-flex">
-          <div class="input-group input-group-sm">
-            <input
-              id="p5saveDateiname"
-              type="text"
-              class="form-control"
-              placeholder="Filename"
-              aria-label="Filename"
-              aria-describedby="p5Save"
-            />
-            <button id="p5Save" class="btn btn-outline-secondary" type="button">
-              <i class="bi bi-download"></i> Save
-            </button>
-          </div>
-        </form>
-        <form class="d-flex">
-          <div class="input-group input-group-sm">
-            <label class="btn btn-outline-secondary btn-sm">
-              <i class="bi bi-upload"></i> Load Program
-              <input type="file" accept=".p5xml" id="p5Dateiwahl" hidden />
-            </label>
-          </div>
-        </form>
-        <form class="d-flex">
-          <button
-            id="URLSave"
-            class="btn btn-outline-secondary btn-sm"
-            type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#URLModal"
-          >
-            <i class="bi bi-file-zip"></i> LZ-Compression
-          </button>
-        </form>
-      </div>
-    </nav>
-    <div class="logo-section container-fluid bg-light">
-      <div class="row justify-content-center align-items-center w-100 h-100">
-        <div class="col-auto">
-          <span style="font-size: 1.1rem; font-weight: 500"
-            >Supported in part by:</span
-          >
-        </div>
-        <div class="col-auto">
-          <img
-            src="NEAlogo.png"
-            alt="NEA Logo"
-            class="img-fluid"
-            style="max-height: 85px; margin: 0 10px"
-          />
-        </div>
-        <div class="col-auto">
-          <img
-            src="GENARTlogo.png"
-            alt="GENART Logo"
-            class="img-fluid"
-            style="max-height: 50px; margin: 0 10px"
-          />
-        </div>
-        <div class="col-auto">
-          <img
-            src="HDRlogo.png"
-            alt="HDR Logo"
-            class="img-fluid"
-            style="max-height: 70px; margin: 0 0px"
-          />
-        </div>
-      </div>
-    </div>
+    <div id="appToast" class="app-toast" role="status" aria-live="polite"></div>
 
     <!-- Modal-JavaScript -->
     <div
@@ -255,7 +252,8 @@
           <div class="modal-header">
             <!-- JavaScript Modal -->
             <h5 class="modal-title" id="JavaScriptModalLabel">
-              <i class="bi bi-code-square"></i>&nbsp;&nbsp;JavaScript Code
+              <i class="bi bi-code-square"></i>
+              <span>JavaScript Code</span>
             </h5>
             <button
               type="button"
@@ -274,7 +272,7 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-outline-primary"
+              class="btn app-btn app-btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
@@ -297,7 +295,8 @@
           <div class="modal-header">
             <!-- URL Modal -->
             <h5 class="modal-title" id="URLModalLabel">
-              <i class="bi bi-file-zip"></i>&nbsp;&nbsp;LZ-Compression
+              <i class="bi bi-link-45deg"></i>
+              <span>Share Link</span>
             </h5>
             <button
               type="button"
@@ -316,7 +315,7 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-outline-primary"
+              class="btn app-btn app-btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
@@ -339,8 +338,8 @@
           <div class="modal-header">
             <!-- Info Modal -->
             <h5 class="modal-title" id="InfoModalLabel">
-              <i class="bi bi-info-circle"></i>&nbsp;&nbsp;About
-              p5.js-Blockly-Editor
+              <i class="bi bi-info-circle"></i>
+              <span>About p5.js-Blockly-Editor</span>
             </h5>
             <button
               type="button"
@@ -398,11 +397,27 @@
                 ><i class="bi bi-box-arrow-up-right"></i
               ></a>
             </p>
+            <div class="support-card">
+              <span class="support-label">Supported in part by</span>
+              <div class="support-logos">
+                <span class="sponsor-logo sponsor-logo--nea support-logo-tall" role="img" aria-label="NEA Logo">
+                  <img class="sponsor-logo__base" src="NEAlogo.png" alt="" aria-hidden="true" />
+                  <img class="sponsor-logo__accent" src="NEAlogo.png" alt="" aria-hidden="true" />
+                </span>
+                <span class="sponsor-logo sponsor-logo--genart support-logo-medium" role="img" aria-label="The Generative Art Fund Logo">
+                  <img class="sponsor-logo__base" src="GENARTlogo.png" alt="" aria-hidden="true" />
+                  <img class="sponsor-logo__accent" src="GENARTlogo.png" alt="" aria-hidden="true" />
+                </span>
+                <span class="sponsor-logo sponsor-logo--hdr support-logo-tall" role="img" aria-label="HDR Logo">
+                  <img class="sponsor-logo__base" src="HDRlogo.png" alt="" aria-hidden="true" />
+                </span>
+              </div>
+            </div>
             <hr />
             <ul class="list-group">
               <li class="list-group-item active">Used Libraries</li>
               <li class="list-group-item">
-                Blockly&nbsp;&nbsp;<a
+                Blockly <a
                   href="https://github.com/google/blockly"
                   class="link-secondary"
                   target="_blank"
@@ -417,7 +432,7 @@
                 >
               </li>
               <li class="list-group-item">
-                p5.js&nbsp;&nbsp;<a
+                p5.js <a
                   href="https://p5js.org/"
                   class="link-secondary"
                   target="_blank"
@@ -432,7 +447,7 @@
                 >
               </li>
               <li class="list-group-item">
-                p.turtle&nbsp;&nbsp;<a
+                p.turtle <a
                   href="https://github.com/jan-martinek/p.turtle"
                   class="link-secondary"
                   target="_blank"
@@ -447,7 +462,7 @@
                 >
               </li>
               <li class="list-group-item">
-                Bootstrap&nbsp;&nbsp;<a
+                Bootstrap <a
                   href="https://getbootstrap.com/"
                   class="link-secondary"
                   target="_blank"
@@ -462,7 +477,7 @@
                 >
               </li>
               <li class="list-group-item">
-                JQuery&nbsp;&nbsp;<a
+                JQuery <a
                   href="https://jquery.com/"
                   class="link-secondary"
                   target="_blank"
@@ -477,7 +492,7 @@
                 >
               </li>
               <li class="list-group-item">
-                Prism&nbsp;&nbsp;<a
+                Prism <a
                   href="https://prismjs.com/"
                   class="link-secondary"
                   target="_blank"
@@ -492,7 +507,7 @@
                 >
               </li>
               <li class="list-group-item">
-                LZ_String&nbsp;&nbsp;<a
+                LZ_String <a
                   href="https://github.com/pieroxy/lz-string/"
                   class="link-secondary"
                   target="_blank"
@@ -507,7 +522,7 @@
                 >
               </li>
               <li class="list-group-item">
-                Split&nbsp;&nbsp;<a
+                Split <a
                   href="https://github.com/nathancahill/split"
                   class="link-secondary"
                   target="_blank"
@@ -526,7 +541,7 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-outline-primary"
+              class="btn app-btn app-btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
@@ -547,7 +562,17 @@
       data-width="100%"
     >
       <div class="offcanvas-header">
-        <button id="backToContent" type="button" class="btn btn-light btn-sm">
+        <div class="offcanvas-title-group">
+          <h2 class="offcanvas-title" id="HilfeOffCanvasLabel">
+            Learning guide
+          </h2>
+          <p>Tutorials and example sketches</p>
+        </div>
+        <button
+          id="backToContent"
+          type="button"
+          class="btn app-btn app-btn-secondary"
+        >
           Back to Selection
         </button>
         <button
@@ -578,14 +603,28 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            Are you sure you want to delete the program?
+            <h5 class="modal-title" id="programmLoeschenModalLabel">
+              Clear current program?
+            </h5>
+          </div>
+          <div class="modal-body">
+            This resets the workspace to the starter sketch. This action cannot
+            be undone.
           </div>
           <div class="modal-footer">
-            <button id="btnLoeschNein" class="btn btn-sm btn-outline-secondary">
+            <button
+              id="btnLoeschNein"
+              type="button"
+              class="btn app-btn app-btn-secondary"
+            >
               Cancel
             </button>
-            <button id="btnLoeschJa" class="btn btn-sm btn-outline-primary">
-              Delete Program
+            <button
+              id="btnLoeschJa"
+              type="button"
+              class="btn app-btn app-btn-primary"
+            >
+              Clear Program
             </button>
           </div>
         </div>
