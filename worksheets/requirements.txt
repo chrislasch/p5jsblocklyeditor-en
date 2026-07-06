@@ -1,0 +1,10 @@
+# Worksheet generator — pinned dependencies (Python 3.12)
+#
+# parser.py is pure stdlib; these cover the test runner (Phase 1) and the
+# renderer/layout (Phases 2-3). Toolchain chosen for print fidelity with no
+# native (Cairo/GTK) dependencies on Windows:
+#   svgwrite  — pure-Python SVG emitter for the pattern/program panels
+#   reportlab — pure-Python vector PDF (ships prebuilt wheels; no Cairo)
+pytest==8.3.4
+svgwrite==1.4.3
+reportlab==4.2.5

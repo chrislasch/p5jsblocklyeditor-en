@@ -1,0 +1,9 @@
+# Python / venv cruft — the working venv lives OUTSIDE Dropbox
+# (%LOCALAPPDATA%\p5worksheets-venv) to avoid sync locks. Never commit one here.
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# generated worksheet output (regenerable via make_worksheet.py)
+out/
