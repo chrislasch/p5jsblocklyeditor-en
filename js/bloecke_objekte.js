@@ -1,20 +1,20 @@
 // Pt 2021 - MIT-License
 
-//Kategorie: Klasse
+//Category: Class
 Blockly.Blocks['klasse_anlegen'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Klasse:")
+        .appendField("Class:")
         .appendField(new Blockly.FieldTextInput("klasse1"), "classname");
     this.appendStatementInput("class_attribute")
-        .appendField("Attribute:")    
+        .appendField("Attributes:")    
         .setCheck(null);
     this.appendStatementInput("class_methoden")
-        .appendField("Methoden:")      
+        .appendField("Methods:")      
         .setCheck(null);        
     this.setColour(farbeObjekte);
     this.setInputsInline(true);    
-    this.setTooltip("Eine Klasse festlegen.");
+    this.setTooltip("Define a class.");
     this.setHelpUrl("");
   }  
 };
@@ -60,14 +60,14 @@ Blockly.JavaScript['klasse_anlegen'] = function(block) {
 Blockly.Blocks['klasse_attribut'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Attribut:")
+        .appendField("Attribute:")
         .appendField(new Blockly.FieldTextInput("attribut1"), "attributname");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Ein Attribut festlegen.");
- this.setHelpUrl("");
+    this.setTooltip("Define an attribute.");
+    this.setHelpUrl("");
   } 
 };
 
@@ -80,13 +80,13 @@ Blockly.JavaScript['klasse_attribut'] = function(block) {
 Blockly.Blocks['klasse_getattribut'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Attribut:")
+        .appendField("Attribute:")
         .appendField(new Blockly.FieldTextInput("attribut1"), "attribut_name");
     this.setInputsInline(true);        
     this.setOutput(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Ein Attribut einer Klasse.");
- this.setHelpUrl("");
+    this.setTooltip("An attribute of a class.");
+    this.setHelpUrl("");
   }
 };
 
@@ -100,19 +100,19 @@ Blockly.JavaScript['klasse_getattribut'] = function(block) {
 Blockly.Blocks['klasse_methode'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Methode:")
+        .appendField("Method:")
         .appendField(new Blockly.FieldTextInput("methode1"), "methodename");
     this.appendStatementInput("methode_parameter")
-        .appendField("Parameter:")
+        .appendField("Parameters:")
         .setCheck(null);        
     this.appendStatementInput("methode_anweisungen")
-        .appendField("Anweisungen:")
+        .appendField("Instructions:")
         .setCheck(null);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);        
     this.setColour(farbeObjekte);
-    this.setTooltip("Eine Methode für eine Klasse festlegen.");
+    this.setTooltip("Define a method for a class.");
     this.setHelpUrl("");
   }  
 };
@@ -164,8 +164,8 @@ Blockly.Blocks['methode_parameter'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Einen Parameter festlegen.");
- this.setHelpUrl("");
+    this.setTooltip("Define a parameter.");
+    this.setHelpUrl("");
   } 
 };
 
@@ -183,8 +183,8 @@ Blockly.Blocks['methode_getparameter'] = {
     this.setInputsInline(true);        
     this.setOutput(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Ein Parameter einer Methode.");
- this.setHelpUrl("");
+    this.setTooltip("A parameter of a method.");
+    this.setHelpUrl("");
   }
 };
 
@@ -198,19 +198,19 @@ Blockly.JavaScript['methode_getparameter'] = function(block) {
 Blockly.Blocks['objekt_anlegen'] = {
   init: function() {
     this.appendValueInput("objektVariable")
-        .appendField("Objekt anlegen:");
+        .appendField("Create object:");
     this.appendDummyInput()
-        .appendField("aus Klasse:")
+        .appendField("from class:")
         .appendField(new Blockly.FieldTextInput("klasse1"), "classname");          
     this.appendStatementInput("objekt_parameter")
-        .appendField("Werte:")    
+        .appendField("Values:")    
         .setCheck(null);        
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Legt ein Objekt auf Basis einer Klasse an.");
- this.setHelpUrl("");
+    this.setTooltip("Creates an object based on a class.");
+    this.setHelpUrl("");
   }
 };
 
@@ -240,19 +240,19 @@ Blockly.JavaScript['objekt_anlegen'] = function(block) {
 Blockly.Blocks['objekt_methode_aufrufen'] = {
   init: function() {
     this.appendValueInput("objektVariable")
-        .appendField("Objekt:");
+        .appendField("Object:");
     this.appendDummyInput()
-        .appendField("Methode aufrufen:")
+        .appendField("Call method:")
         .appendField(new Blockly.FieldTextInput("methode1"), "methodename");          
     this.appendStatementInput("objekt_parameter")
-        .appendField("Werte:")    
+        .appendField("Values:")    
         .setCheck(null);        
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Ruft eine Objekt-Methode auf.");
- this.setHelpUrl("");
+    this.setTooltip("Calls an object method.");
+    this.setHelpUrl("");
   }
 };
 
@@ -287,12 +287,12 @@ Blockly.Blocks['objekt_wert'] = {
   init: function() {
    this.appendValueInput("WERT")
         .setCheck(null)
-        .appendField("Wert:");
+        .appendField("Value:");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Einen Wert übergeben");
- this.setHelpUrl("");
+    this.setTooltip("Pass a value");
+    this.setHelpUrl("");
   }
 };
 
@@ -306,7 +306,7 @@ Blockly.Blocks['attribut_aendern'] = {
   init: function() {
     this.appendValueInput("attribut_name")
         .setCheck(null)
-        .appendField("Attribut ändern:");
+        .appendField("Change attribute:");
     this.appendValueInput("attribut_wert")
         .setCheck(null)
         .appendField("=");
@@ -314,8 +314,8 @@ Blockly.Blocks['attribut_aendern'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeObjekte);
- this.setTooltip("Attribut ändern");
- this.setHelpUrl("");
+    this.setTooltip("Change attribute");
+    this.setHelpUrl("");
   }
 };
 

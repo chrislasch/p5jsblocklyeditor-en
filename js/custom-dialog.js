@@ -14,14 +14,14 @@ CustomDialog = {};
 
 /** Override Blockly.alert() with custom implementation. */
 Blockly.dialog.alert = function(message, callback) {
-  CustomDialog.show('Hinweis...', message, {
+  CustomDialog.show('Notice...', message, {
     onCancel: callback
   });
 };
 
 /** Override Blockly.confirm() with custom implementation. */
 Blockly.dialog.confirm = function(message, callback) {
-  CustomDialog.show('Bestätigen...', message, {
+  CustomDialog.show('Confirm...', message, {
     showOkay: true,
     onOkay: function() {
       callback(true);
@@ -35,7 +35,7 @@ Blockly.dialog.confirm = function(message, callback) {
 
 /** Override Blockly.prompt() with custom implementation. */
 Blockly.dialog.prompt = function(message, defaultValue, callback) {
-  CustomDialog.show('Eingabe...', message, {
+  CustomDialog.show('Input...', message, {
     showInput: true,
     showOkay: true,
     onOkay: function() {
@@ -105,7 +105,7 @@ CustomDialog.show = function(title, message, options) {
       '<p class="card-body" style="padding: 0px; margin-top: 10px; margin-bottom: 10px"></p>' +
       (options.showInput ? '<div><input style="margin-bottom: 10px" type="text" class="form-control" id="customDialogInput"></div>' : '') +
       '<div class="customDialogButtons">' +
-      (options.showCancel ? '<button type="button" class="btn btn-outline-primary" style="margin-right: 10px" id="customDialogCancel">Abbrechen</button>': '') +
+      (options.showCancel ? '<button type="button" class="btn btn-outline-primary" style="margin-right: 10px" id="customDialogCancel">Cancel</button>': '') +
       (options.showOkay ? '<button type="button" class="btn btn-outline-primary" id="customDialogOkay">OK</button>': '') +
       '</div>';
   dialogDiv.getElementsByClassName('card-title')[0]

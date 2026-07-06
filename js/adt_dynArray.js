@@ -7,13 +7,13 @@ Blockly.Blocks['adt_dynArray_neu'] = {
     this.appendValueInput("dynArrayVariable")
         .appendField("");
     this.appendDummyInput()
-        .appendField("= new DynArray()");    
+        .appendField("= new DynArray()");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTdynArray);
- this.setTooltip("Eine leere dynamische Reihung wird angelegt.");
- this.setHelpUrl("");
+    this.setTooltip("Creates an empty dynamic array.");
+    this.setHelpUrl("");
   }
 };
 
@@ -43,12 +43,12 @@ Blockly.Blocks['adt_dynArray_isEmpty'] = {
     this.appendValueInput("dynArrayVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".isEmpty(): Wahrheitswert");
+        .appendField(".isEmpty(): Boolean");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTdynArray);
- this.setTooltip("Wenn die Reihung kein Element enthält, wird der Wert wahr zurückgegeben, sonst der Wert falsch.");
- this.setHelpUrl("");
+    this.setTooltip("Returns true if the array contains no elements, otherwise false.");
+    this.setHelpUrl("");
   }
 };
 
@@ -66,12 +66,12 @@ Blockly.Blocks['adt_dynArray_getItem'] = {
     this.appendValueInput("AT")
         .appendField(".getItem(");
     this.appendDummyInput()
-        .appendField("): Inhalt");          
+        .appendField("): Value");          
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbeADTdynArray);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("Returns the value at the given index.");
+    this.setHelpUrl("");
   }
 };
 
@@ -90,13 +90,13 @@ Blockly.Blocks['adt_dynArray_append'] = {
     this.appendValueInput("neuesElement")
         .appendField(".append(");
     this.appendDummyInput()
-        .appendField(")");          
+        .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTdynArray);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("Appends a value to the end of the array.");
+    this.setHelpUrl("");
   }
 };
 
@@ -117,13 +117,13 @@ Blockly.Blocks['adt_dynArray_insertAt'] = {
     this.appendValueInput("neuesElement")
         .appendField(",");
     this.appendDummyInput()
-        .appendField(")"); 
+        .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTdynArray);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("Inserts a value at the given index.");
+    this.setHelpUrl("");
   }
 };
 
@@ -145,13 +145,13 @@ Blockly.Blocks['adt_dynArray_setItem'] = {
     this.appendValueInput("neuesElement")
         .appendField(",");
     this.appendDummyInput()
-        .appendField(")");         
+        .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTdynArray);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("Sets the value at the given index.");
+    this.setHelpUrl("");
   }
 };
 
@@ -171,13 +171,13 @@ Blockly.Blocks['adt_dynArray_delete'] = {
     this.appendValueInput("idx")
         .appendField(".delete(");
     this.appendDummyInput()
-        .appendField(")"); 
+        .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTdynArray);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("Deletes the value at the given index.");
+    this.setHelpUrl("");
   }
 };
 
@@ -194,12 +194,12 @@ Blockly.Blocks['adt_dynArray_getLength'] = {
         .setCheck('Array')
         .appendField("");
     this.appendDummyInput()
-        .appendField(".getLength(): Ganzzahl");
+        .appendField(".getLength(): Integer");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbeADTdynArray);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("Returns the length of the array.");
+    this.setHelpUrl("");
   }
 };
 
@@ -214,12 +214,12 @@ Blockly.Blocks['adt_dynArray_getDynArray'] = {
     this.appendValueInput("dynArrayVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".getDynArray(): Inhalt");
+        .appendField(".getDynArray(): Content");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTdynArray);
- this.setTooltip("Der gesamte Inhalt der dynamischen Reihung wird als Array zurückgegeben.");
- this.setHelpUrl("");
+    this.setTooltip("Returns the entire content of the dynamic array as an array.");
+    this.setHelpUrl("");
   }
 };
 

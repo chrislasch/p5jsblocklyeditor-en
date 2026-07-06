@@ -12,8 +12,8 @@ Blockly.Blocks['adt_queue_neu'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTSchlange);
- this.setTooltip("Eine leere Schlange wird angelegt.");
- this.setHelpUrl("");
+    this.setTooltip("Creates an empty queue.");
+    this.setHelpUrl("");
   }
 };
 
@@ -40,12 +40,12 @@ Blockly.Blocks['adt_queue_isEmpty'] = {
     this.appendValueInput("queueVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".isEmpty(): Wahrheitswert");
+        .appendField(".isEmpty(): Boolean");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTSchlange);
- this.setTooltip("Wenn die Schlange kein Element enthält, wird der Wert wahr zurückgegeben, sonst der Wert falsch.");
- this.setHelpUrl("");
+    this.setTooltip("Returns true if the queue contains no elements, otherwise false.");
+    this.setHelpUrl("");
   }
 };
 
@@ -60,12 +60,12 @@ Blockly.Blocks['adt_queue_head'] = {
     this.appendValueInput("queueVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".head(): Inhalt");
+        .appendField(".head(): Value");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTSchlange);
- this.setTooltip("Der Inhalt des ersten Elements der Schlange wird zurückgegeben, das Element aber nicht entfernt.");
- this.setHelpUrl("");
+    this.setTooltip("Returns the value of the first element of the queue without removing it.");
+    this.setHelpUrl("");
   }
 };
 
@@ -88,8 +88,8 @@ Blockly.Blocks['adt_queue_enqueue'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTSchlange);
- this.setTooltip("Ein neues Element mit dem angegebenen Inhalt wird angelegt und am Ende an die Schlange angehängt.");
- this.setHelpUrl("");
+    this.setTooltip("Adds a new element with the given value to the end of the queue.");
+    this.setHelpUrl("");
   }
 };
 
@@ -105,12 +105,12 @@ Blockly.Blocks['adt_queue_dequeue'] = {
     this.appendValueInput("queueVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".dequeue(): Inhalt");
+        .appendField(".dequeue(): Value");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTSchlange);
- this.setTooltip("Der Inhalt des ersten Elements wird zurückgegeben und das Element wird entfernt.");
- this.setHelpUrl("");
+    this.setTooltip("Returns the value of the first element and removes it from the queue.");
+    this.setHelpUrl("");
   }
 };
 
@@ -125,12 +125,12 @@ Blockly.Blocks['adt_queue_getQueue'] = {
     this.appendValueInput("queueVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".getQueue(): Inhalt");
+        .appendField(".getQueue(): Content");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTSchlange);
- this.setTooltip("Der gesamte Inhalt der Schlange wird als Array zurückgegeben.");
- this.setHelpUrl("");
+    this.setTooltip("Returns the entire content of the queue as an array.");
+    this.setHelpUrl("");
   }
 };
 

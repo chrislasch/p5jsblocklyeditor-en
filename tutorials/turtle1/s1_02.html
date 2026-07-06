@@ -1,108 +1,134 @@
-<h4><i class="bi bi-easel"></i>&nbsp;S1.2 - Rechteck und Quadrat malen</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;S1.2 - Draw Rectangle and Square</h4>
 
 <div class="card mb-3">
-  <div class="card-header">Vorlage laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_02_bsp00" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Schildkröte ins Programm laden</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Template:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_02_bsp00" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Load Turtle into Program
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_02_bsp00').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_02_00.p5xml');
-};
+  document.getElementById("s1_02_bsp00").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_02_00.p5xml");
+  };
 </script>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Ein Quadrat malen</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Zwischen den Block "Turtle einfügen" und den Block "Bewegung aufzeichnen" setzt man die Blöcke, mit denen der Schildkröte gesagt wird, was sie tun soll.</p>
-        <p>Die Schildkröte soll ein <b>Quadrat</b> zeichnen. Also soll sie erst 200 Pixel geradeaus gehen, dann die Richtung um 90° nach links drehen und das insgesamt 4 Mal machen.</p>
-        <p><img src="tutorials/turtle1/s1_02_01.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Draw a Square</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        Between the "Insert Turtle" block and the "Record Movement" block, you
+        place the blocks that tell the turtle what it should do.
+      </p>
+      <p>
+        The turtle should draw a <b>square</b>. So it should first go 200 pixels
+        straight ahead, then turn 90° to the left and do this a total of 4
+        times.
+      </p>
+      <p><img src="tutorials/turtle1/s1_02_01.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_02_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Schildkröte malt ein Quadrat</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_02_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Turtle Draws a Square
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_02_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_02_01.p5xml');
-};
+  document.getElementById("s1_02_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_02_01.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Weniger Tipparbeit</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Um der Schildkröte beizubringen, wie ein Quadrat gezeichnet wird, müssen 8 Blöcke ins Programm gesetzt werden.</p>
-        <p><img src="tutorials/turtle1/s1_02_02a.jpg"></p>
-        <p>Diese 8 Blöcke sind eine Wiederholung von 2 Blöcken.</p>
-        <p><img src="tutorials/turtle1/s1_02_02b.jpg"></p>
-        <p>Um Tipparbeit zu sparen, können die beiden Blöcke in einen Wiederholungsblock gesetzt werden. Den Wiederholungsblock findet man in der Kategorie "Schleifen".</p>
-        <p><img src="tutorials/turtle1/s1_02_02c.jpg"></p>
-        <p>Damit kann das Programm kürzer geschrieben werden:</p>
-        <p><img src="tutorials/turtle1/s1_02_02.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Less Typing</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        To teach the turtle how to draw a square, 8 blocks must be placed in the
+        program.
+      </p>
+      <p><img src="tutorials/turtle1/s1_02_02a.jpg" /></p>
+      <p>These 8 blocks are a repetition of 2 blocks.</p>
+      <p><img src="tutorials/turtle1/s1_02_02b.jpg" /></p>
+      <p>
+        To save typing, the two blocks can be placed in a repeat block. The
+        repeat block can be found in the "Loops" category.
+      </p>
+      <p><img src="tutorials/turtle1/s1_02_02c.jpg" /></p>
+      <p>This way the program can be written shorter:</p>
+      <p><img src="tutorials/turtle1/s1_02_02.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_02_bsp02" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Schildkröte malt ein Quadrat mit einer Wiederholungsschleife</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_02_bsp02" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Turtle Draws a Square with a
+        Repeat Loop
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_02_bsp02').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_02_02.p5xml');
-};
+  document.getElementById("s1_02_bsp02").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_02_02.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Ein Rechteck zeichnen</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Bei einem Rechteck sind 2 gegenüberliegende Seiten gleich lang. Das Programm wird entsprechend geändert.</p>
-        <p><img src="tutorials/turtle1/s1_02_03a.jpg"></p>
-        <p>Diese 8 Blöcke sind eine Wiederholung von 4 Blöcken.</p>
-        <p><img src="tutorials/turtle1/s1_02_03b.jpg"></p>
-        <p>Um Tipparbeit zu sparen, können die beiden Blöcke in einen Wiederholungsblock gesetzt werden.</p>
-        <p><img src="tutorials/turtle1/s1_02_03c.jpg"></p>
-        <p>Damit kann das Programm wie folgt geschrieben werden:</p>
-        <p><img src="tutorials/turtle1/s1_02_03.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Draw a Rectangle</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        In a rectangle, 2 opposite sides are the same length. The program is
+        changed accordingly.
+      </p>
+      <p><img src="tutorials/turtle1/s1_02_03a.jpg" /></p>
+      <p>These 8 blocks are a repetition of 4 blocks.</p>
+      <p><img src="tutorials/turtle1/s1_02_03b.jpg" /></p>
+      <p>To save typing, the two blocks can be placed in a repeat block.</p>
+      <p><img src="tutorials/turtle1/s1_02_03c.jpg" /></p>
+      <p>This way the program can be written as follows:</p>
+      <p><img src="tutorials/turtle1/s1_02_03.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_02_bsp03" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Schildkröte malt ein Rechteck mit einer Wiederholungsschleife</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_02_bsp03" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Turtle Draws a Rectangle with
+        a Repeat Loop
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_02_bsp03').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_02_03.p5xml');
-};
+  document.getElementById("s1_02_bsp03").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_02_03.p5xml");
+  };
 </script>

@@ -1,13 +1,13 @@
 // Pt 2021 - MIT-License
 
-//Kategorie: Werte
+//Category: Values
 Blockly.Blocks['mousex'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Maus: x-Koordinate");
+        .appendField("Mouse: x-coordinate");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die aktuelle x-Koordinate der Maus.");
+    this.setTooltip("Returns the current x-coordinate of the mouse.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/mouseX");
   }
 };
@@ -20,10 +20,10 @@ Blockly.JavaScript['mousex'] = function(block) {
 Blockly.Blocks['pmousex'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Maus: vorige x-Koordinate");
+        .appendField("Mouse: previous x-coordinate");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die vorige x-Koordinate der Maus.");
+    this.setTooltip("Returns the previous x-coordinate of the mouse.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/pmouseX");
   }
 };
@@ -36,10 +36,10 @@ Blockly.JavaScript['pmousex'] = function(block) {
 Blockly.Blocks['mousey'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Maus: y-Koordinate");
+        .appendField("Mouse: y-coordinate");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die y-Koordinate der Maus.");
+    this.setTooltip("Returns the y-coordinate of the mouse.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/mouseY");
   }
 };
@@ -52,10 +52,10 @@ Blockly.JavaScript['mousey'] = function(block) {
 Blockly.Blocks['pmousey'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Maus: vorige y-Koordinate");
+        .appendField("Mouse: previous y-coordinate");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die vorige y-Koordinate der Maus.");
+    this.setTooltip("Returns the previous y-coordinate of the mouse.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/pmouseY");
   }
 };
@@ -68,10 +68,10 @@ Blockly.JavaScript['pmousey'] = function(block) {
 Blockly.Blocks['mouse_pressed'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Die Maustaste ist gedrückt!");
+        .appendField("Mouse button is pressed!");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert \'wahr\', wenn die Maustaste gedrückt ist, sonst \'falsch\'.");
+    this.setTooltip("Returns 'true' if the mouse button is pressed, otherwise 'false'.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/mouseIsPressed");
   }
 };
@@ -84,10 +84,10 @@ Blockly.JavaScript['mouse_pressed'] = function(block) {
 Blockly.Blocks['canvaswidth'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Breite der Zeichenfläche");
+        .appendField("Canvas width");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die aktuelle Breite der Zeichenfläche.");
+    this.setTooltip("Returns the current width of the canvas.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/width");
   }
 };
@@ -100,10 +100,10 @@ Blockly.JavaScript['canvaswidth'] = function(block) {
 Blockly.Blocks['canvasheight'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Höhe der Zeichenfläche");
+        .appendField("Canvas height");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die aktuelle Höhe der Zeichenfläche.");
+    this.setTooltip("Returns the current height of the canvas.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/height");
   }
 };
@@ -116,7 +116,7 @@ Blockly.JavaScript['canvasheight'] = function(block) {
 Blockly.Blocks['entfernung_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Entfernung von");
+        .appendField("Distance from");
     this.appendValueInput("x1")
         .setCheck("Number")
         .appendField("x1 =");
@@ -124,7 +124,7 @@ Blockly.Blocks['entfernung_var'] = {
         .setCheck("Number")
         .appendField("y1 =");
     this.appendDummyInput()
-        .appendField("nach");
+        .appendField("to");
     this.appendValueInput("x2")
         .setCheck("Number")
         .appendField("x2 =");
@@ -134,8 +134,8 @@ Blockly.Blocks['entfernung_var'] = {
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
- this.setTooltip("Misst die Entfernung zwischen zwei Koordinaten.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/dist");
+    this.setTooltip("Measures the distance between two coordinates.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/dist");
   }
 };
 
@@ -151,7 +151,7 @@ Blockly.JavaScript['entfernung_var'] = function(block) {
 Blockly.Blocks['map_value'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Rechne ");
+        .appendField("Map ");
     this.appendValueInput("wertVariable")
         .setCheck("Number")
     this.appendValueInput("w1min")
@@ -161,7 +161,7 @@ Blockly.Blocks['map_value'] = {
         .setCheck("Number")
         .appendField("max:");
     this.appendDummyInput()
-        .appendField("nach");
+        .appendField("to");
     this.appendValueInput("w2min")
         .setCheck("Number")
         .appendField("min:");
@@ -171,8 +171,8 @@ Blockly.Blocks['map_value'] = {
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
- this.setTooltip("Rechnet Werte von einem Wertebereich in einen anderen Wertebereich um.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/map");
+    this.setTooltip("Maps values from one range to another.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/map");
   }
 };
 
@@ -189,26 +189,26 @@ Blockly.JavaScript['map_value'] = function(block) {
 Blockly.Blocks['uhrzeit_digital'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Digitale Uhrzeit");
+        .appendField("Digital time");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die aktuelle Uhrzeit in digitaler Darstellung.");
+    this.setTooltip("Returns the current time in digital format.");
     this.setHelpUrl("");
   }
 };
 
 Blockly.JavaScript['uhrzeit_digital'] = function(block) {
-  var code = 'String(p5sketch.hour()).padStart(2, "0") + \":\" + String(p5sketch.minute()).padStart(2, "0")  + \":\" + String(p5sketch.second()).padStart(2, "0")';
+  var code = 'String(p5sketch.hour()).padStart(2, "0") + ":" + String(p5sketch.minute()).padStart(2, "0")  + ":" + String(p5sketch.second()).padStart(2, "0")';
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.Blocks['uhrzeit_sekunde'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Uhrzeit: Sekunde");
+        .appendField("Time: second");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die Sekundenzahl der aktuellen Uhrzeit.");
+    this.setTooltip("Returns the current second.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/second");
   }
 };
@@ -221,10 +221,10 @@ Blockly.JavaScript['uhrzeit_sekunde'] = function(block) {
 Blockly.Blocks['uhrzeit_minute'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Uhrzeit: Minute");
+        .appendField("Time: minute");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die Minutenzahl der aktuellen Uhrzeit.");
+    this.setTooltip("Returns the current minute.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/minute");
   }
 };
@@ -237,10 +237,10 @@ Blockly.JavaScript['uhrzeit_minute'] = function(block) {
 Blockly.Blocks['uhrzeit_stunde'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Uhrzeit: Stunde");
+        .appendField("Time: hour");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die Stundenzahl der aktuellen Uhrzeit.");
+    this.setTooltip("Returns the current hour.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/hour");
   }
 };
@@ -253,10 +253,10 @@ Blockly.JavaScript['uhrzeit_stunde'] = function(block) {
 Blockly.Blocks['zeit_millis'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Millisekunden seit Programmstart");
+        .appendField("Milliseconds since program start");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die Anzahl der Millisekunden seit Programmstart.");
+    this.setTooltip("Returns the number of milliseconds since the program started.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/millis");
   }
 };
@@ -269,10 +269,10 @@ Blockly.JavaScript['zeit_millis'] = function(block) {
 Blockly.Blocks['p5key'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Tastatur: Taste");
+        .appendField("Keyboard: key");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert die gedrückte Taste des aktuellen Tastaturlayouts.");
+    this.setTooltip("Returns the pressed key of the current keyboard layout.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/key");
   }
 };
@@ -285,10 +285,10 @@ Blockly.JavaScript['p5key'] = function(block) {
 Blockly.Blocks['p5keyCode'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Tastatur: Tasten-Code");
+        .appendField("Keyboard: key code");
     this.setOutput(true, null);
     this.setColour(farbep5Werte);
-    this.setTooltip("Liefert den Tasten-Code der gedrückten Taste.");
+    this.setTooltip("Returns the key code of the pressed key.");
     this.setHelpUrl("https://p5js.org/reference/#p5/keyCode");
   }
 };

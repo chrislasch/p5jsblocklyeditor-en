@@ -1,110 +1,137 @@
-<h4><i class="bi bi-easel"></i>&nbsp;K1.6a: Kopien von Figuren</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.6a: Copies of Figures</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Gleiche Kreise</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Im letzten Kapitel wurden vier gleiche Kreise gezeichnet.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_06_01a.jpg">
-      </li>
-      <li class="list-group-item">
-        <p>Dafür wurden 4 Blöcke eingebaut.</p>
-      </li> 
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_06_01b.jpg">
-      </li>
-      <li class="list-group-item">
-        <p>Solche Wiederholungen kann man mit einem Wiederholungs-Block zusammenfassen. Da sich die x-Koordinate der 4 Kreise ändert, brauchen wir eine neue Variable für die x-Koordinate. Der Wert der Variable "xkoord" wird bei jedem Durchlauf durch die Wiederholungsschleife geändert.</p>
-      </li> 
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_06_01.jpg">
-      </li>      
-    </ul>
+  <div class="card-header">Same Circles</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>In the last chapter, four identical circles were drawn.</p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_06_01a.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>For this, 4 blocks were built in.</p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_06_01b.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        Such repetitions can be combined with a repetition block. Since the
+        x-coordinate of the 4 circles changes, we need a new variable for the
+        x-coordinate. The value of the variable "xcoord" is changed on each pass
+        through the repetition loop.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_06_01.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_06_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Einfache Wiederholung</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_06_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Simple Repetition
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('k1_06_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_06_01.p5xml');
-};
+  document.getElementById("k1_06_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_06_01.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.6b: Wiederholung einer Wiederholung</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.6b: Repetition of a Repetition</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Mehrere Reihen von Kreisen</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Wenn man einen Wiederholungs-Block in einen Wiederholungsblock einbaut, dann können mehrere Reihen von Kreisen gezeichnet werden. Dazu brauchen wir eine weitere Variable für die y-Koordinate.</p>
-      </li>
-      <li class="list-group-item">
-          <p>Der äußere Wiederholungsblock wird 4 mal wiederholt. Der innere Wiederholungsblock wird 4 x 4 = 16 Mal wiederholt. Damit die Kreise immer wieder vom Anfang der Zeile aus gezeichnet werden, muss vor jedem Neustart des inneren Wiederholungsblocks die x-Koordinate auf 50 zurückgesetzt werden.</p>
-      </li>      
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_06_02.jpg">
-      </li> 
-    </ul>
+  <div class="card-header">Multiple Rows of Circles</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        If you build a repetition block into a repetition block, then multiple
+        rows of circles can be drawn. For this we need another variable for the
+        y-coordinate.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <p>
+        The outer repetition block is repeated 4 times. The inner repetition
+        block is repeated 4 x 4 = 16 times. So that the circles are always drawn
+        from the beginning of the line, the x-coordinate must be reset to 50
+        before each restart of the inner repetition block.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_06_02.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_06_bsp02" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Geschachtelte Wiederholung</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_06_bsp02" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Nested Repetition
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_06_bsp02').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_06_02.p5xml');
-};
+  document.getElementById("k1_06_bsp02").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_06_02.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.6c: Vielfache Wiederholung</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.6c: Multiple Repetition</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">400 Kreise</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Beim ersten Anschauen sieht ein Programm mit einer Wiederholung in einer Wiederholung kompliziert aus. Ist es auch.</p>
-          <p>Der große Vorteil einer solchen Programmierung wird sichtbar, wenn man sehr viele Kreise zeichnen möchte. Im folgenden Beispiel werden nicht nur 16, sondern gleich 400 Kreise gezeichnet.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_06_03.jpg">
-      </li> 
-    </ul>
+  <div class="card-header">400 Circles</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        At first glance, a program with a repetition in a repetition looks
+        complicated. It is.
+      </p>
+      <p>
+        The great advantage of such programming becomes visible when you want to
+        draw very many circles. In the following example, not only 16, but 400
+        circles are drawn at once.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_06_03.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_06_bsp03" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Vielfache Wiederholung</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_06_bsp03" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Multiple Repetition
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_06_bsp03').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_06_03.p5xml');
-};
+  document.getElementById("k1_06_bsp03").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_06_03.p5xml");
+  };
 </script>

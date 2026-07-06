@@ -1,195 +1,278 @@
-<h4><i class="bi bi-easel"></i>&nbsp;S1.5 - Regelmäßige Vielecke</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;S1.5 - Regular Polygons</h4>
 
 <div class="card mb-3">
-  <div class="card-header">Vorlage laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_05_bsp00" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Schildkröte malt Quadrate</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Template:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_05_bsp00" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Turtle Draws Squares
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_05_bsp00').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_05_00.p5xml');
-};
+  document.getElementById("s1_05_bsp00").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_05_00.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Dreiecke zeichnen</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Anstelle des Quadrats sollen jetzt gleichseitige Dreiecke mit unterschiedlichen Seitenlängen gezeichnet werden.</p>
-        <p>Die Innenwinkel in einem Quadrat sind 90° groß, bei einem Dreieck ist der Innenwinkel in einer Ecke kleiner. In einem Dreieck ist die Summe der Innenwinkel 180° groß. Da es drei Ecken hat, muss bei einer Ecke in einem regelmäßigen Dreieck der Innenwinkel 60° groß sein.</p>
-        <p><img src="tutorials/turtle1/s1_05_01a.jpg"></p>
-        <p>Also ändern wir das Programm für die Schildkröte entsprechend ab:</p>
-        <p><img src="tutorials/turtle1/s1_05_01b.jpg"></p>
-        <p>Die Schildkröte malt aber keine Dreiecke. Irgendwo ist ein Denkfehler.</p>
-        <p><img src="tutorials/turtle1/s1_05_01c.jpg"></p>
-        <p>Die Schildkröte ändert ihre Laufrichtung um einen Winkel von 60° relativ zu ihrer Laufrichtung:</p>
-        <p><img src="tutorials/turtle1/s1_05_01d.jpg"></p>
-        <p>Wenn an einer Ecke des Dreiecks ein Innenwinkel von 60° entstehen soll, dann muss die Schildkröte ihre Richtung um 120° ändern, damit im Dreieck ein Winkel von 60° entsteht:</p>
-        <p><img src="tutorials/turtle1/s1_05_01e.jpg"></p>
-        <p>Mit dieser Einsicht wird das Programm wie folgt geändert:</p>
-        <p><img src="tutorials/turtle1/s1_05_01.jpg"></p>
-        <p>Jetzt werden gleichseitige Dreiecke von der Schildkröte gezeichnet:</p>
-        <p><img src="tutorials/turtle1/s1_05_01f.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Draw Triangles</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        Instead of squares, equilateral triangles with different side lengths
+        should now be drawn.
+      </p>
+      <p>
+        The interior angles in a square are 90° large, in a triangle the
+        interior angle at a corner is smaller. In a triangle, the sum of the
+        interior angles is 180°. Since it has three corners, the interior angle
+        at one corner in a regular triangle must be 60°.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_01a.jpg" /></p>
+      <p>So we modify the program for the turtle accordingly:</p>
+      <p><img src="tutorials/turtle1/s1_05_01b.jpg" /></p>
+      <p>
+        But the turtle doesn't draw triangles. There's a thinking error
+        somewhere.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_01c.jpg" /></p>
+      <p>
+        The turtle changes its running direction by an angle of 60° relative to
+        its running direction:
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_01d.jpg" /></p>
+      <p>
+        If an interior angle of 60° is to be created at a corner of the
+        triangle, then the turtle must change its direction by 120° so that an
+        angle of 60° is created in the triangle:
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_01e.jpg" /></p>
+      <p>With this insight, the program is changed as follows:</p>
+      <p><img src="tutorials/turtle1/s1_05_01.jpg" /></p>
+      <p>Now equilateral triangles are drawn by the turtle:</p>
+      <p><img src="tutorials/turtle1/s1_05_01f.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_05_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;gleichseitige Dreiecke zeichnen</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_05_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Draw Equilateral Triangles
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_05_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_05_01.p5xml');
-};
+  document.getElementById("s1_05_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_05_01.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>regelmäßige Vielecke zeichnen</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>In einem Dreieck ist die Summe der Innenwinkel 180° groß.</p>
-        <p><img src="tutorials/turtle1/s1_05_02a.jpg"></p>
-        <p>Um aus einem Dreieck ein Viereck zu bauen, wird eine vierte Ecke angebaut. Ein Viereck besteht aus zwei Dreiecken, weswegen die Summe der Innenwinkel in einem Viereck 360° groß ist.</p>
-        <p><img src="tutorials/turtle1/s1_05_02b.jpg"></p>
-        <p>In einem Fünfeck wird an das Viereck ein weiteres Dreieck angebaut, weswegen die Innenwinkelsumme in einem Fünfeck 360° + 180° = 540° groß ist.</p>
-        <p><img src="tutorials/turtle1/s1_05_02c.jpg"></p>
-        <p>In einem Sechseck wird an das Fünfeck ein weiteres Dreieck angebaut, weswegen die Innenwinkelsumme in einem Sechseck 540° + 180° = 720° groß ist.</p>
-        <p><img src="tutorials/turtle1/s1_05_02d.jpg"></p>
-        <p>Allgemein kann man sagen, dass ein N-Eck eine Innenwinkelsumme von (N-2) · 180° hat.</p>
-        <p>Wenn die Schildkröte ein N-Eck zeichnen soll, dann kann sie sich selbst ausrechnen, wie groß der Winkel sein muss, um den sie ihre Richtung ändern soll. Wir müssen aber daran denken, dass wir den gewünschten Innenwinkel von 180° abziehen, um den Richtungswinkel der Schildkröte zu bekommen:</p>
-        <p><img src="tutorials/turtle1/s1_05_01e.jpg"></p>
-        <p>Zusätzlich zur Variablen "seitenlaenge" werden die Variablen "anzahlecken", "innenwinkelsumme" und "richtungswinkel" eingefügt:</p>
-        <p><img src="tutorials/turtle1/s1_05_02f.jpg"></p>
-        <p>Für die Innenwinkelsumme gilt: "innenwinkelsumme" = ("anzahlecken"-2)·180°</p>
-        <p>In Blockly gibt es keine Klammern. Es gilt bei der Berechnung eines Terms die Regel, dass zwei Zahlen, die in einem gemeinsamen Block stehen, zuerst verrechnet werden. Im folgenden Ausdruck wird also zuerst "anzahlecken"-2 gerechnet und dann das Ergebnis mit 180 multipliziert. Den Rechenblock findet man in der Kategorie "Mathematik".</p>
-        <p><img src="tutorials/turtle1/s1_05_02g.jpg"></p>
-        <p>Für einen Innenwinkel in einem regelmäßigen Vieleck gilt folglich: innenwinkel = innenwinkelsumme / anzahlecken. Um den Richtungswinkel der Schildkröte zu berechnen, müssen wir den Innenwinkel von 180° abziehen:</p>
-        <p>"richtungswinkel" = 180° - ("innenwinkelsumme" / "anzahlecken")</p>
-        <p><img src="tutorials/turtle1/s1_05_02h.jpg"></p>
-        <p>Der berechnete Richtungswinkel wird in den Block "Drehung nach links" eingetragen.</p>
-        <p><img src="tutorials/turtle1/s1_05_02i.jpg"></p>
-        <p>Damit die Schildkröte ein N-Eck zeichnet, wird als Anzahl der Wiederholungen die Anzahl der Ecken eingetragen.</p>
-        <p><img src="tutorials/turtle1/s1_05_02j.jpg"></p>
-        <p>Das vollständige Programm sieht dann wie folgt aus. Wenn man die Anzahl der Ecken ändert, wird von der Schildkröte ein entsprechendes Vieleck gezeichnet.</p>
-        <p><img src="tutorials/turtle1/s1_05_02.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Draw Regular Polygons</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>In a triangle, the sum of the interior angles is 180°.</p>
+      <p><img src="tutorials/turtle1/s1_05_02a.jpg" /></p>
+      <p>
+        To build a quadrilateral from a triangle, a fourth corner is added. A
+        quadrilateral consists of two triangles, which is why the sum of the
+        interior angles in a quadrilateral is 360°.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_02b.jpg" /></p>
+      <p>
+        In a pentagon, another triangle is added to the quadrilateral, which is
+        why the sum of interior angles in a pentagon is 360° + 180° = 540°.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_02c.jpg" /></p>
+      <p>
+        In a hexagon, another triangle is added to the pentagon, which is why
+        the sum of interior angles in a hexagon is 540° + 180° = 720°.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_02d.jpg" /></p>
+      <p>
+        In general, one can say that an N-gon has a sum of interior angles of
+        (N-2) · 180°.
+      </p>
+      <p>
+        If the turtle is to draw an N-gon, then it can calculate for itself how
+        large the angle must be by which it should change its direction. But we
+        must remember that we subtract the desired interior angle from 180° to
+        get the turtle's direction angle:
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_01e.jpg" /></p>
+      <p>
+        In addition to the variable "sideLength", the variables "numberOfSides",
+        "sumOfInteriorAngles" and "directionAngle" are inserted:
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_02f.jpg" /></p>
+      <p>
+        For the sum of interior angles: "sumOfInteriorAngles" =
+        ("numberOfSides"-2)·180°
+      </p>
+      <p>
+        In Blockly there are no parentheses. When calculating a term, the rule
+        applies that two numbers that are in a common block are calculated
+        first. In the following expression, "numberOfSides"-2 is calculated
+        first and then the result is multiplied by 180. The calculation block
+        can be found in the "Mathematics" category.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_02g.jpg" /></p>
+      <p>
+        For an interior angle in a regular polygon: interior angle =
+        sumOfInteriorAngles / numberOfSides. To calculate the turtle's direction
+        angle, we must subtract the interior angle from 180°:
+      </p>
+      <p>"directionAngle" = 180° - ("sumOfInteriorAngles" / "numberOfSides")</p>
+      <p><img src="tutorials/turtle1/s1_05_02h.jpg" /></p>
+      <p>The calculated direction angle is entered in the "Turn Left" block.</p>
+      <p><img src="tutorials/turtle1/s1_05_02i.jpg" /></p>
+      <p>
+        For the turtle to draw an N-gon, the number of sides is entered as the
+        number of repetitions.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_02j.jpg" /></p>
+      <p>
+        The complete program then looks like this. If you change the number of
+        sides, the turtle draws a corresponding polygon.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_02.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_05_bsp02" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;regelmäßige Vielecke zeichnen</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_05_bsp02" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Draw Regular Polygons
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_05_bsp02').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_05_02.p5xml');
-};
+  document.getElementById("s1_05_bsp02").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_05_02.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Die Schildkröte malt einen Kreis</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Wenn man die Seitenlänge des Vielecks sehr klein und die Anzahl der Ecken sehr groß macht, dann malt die Schildkröte ein regelmäßiges Vieleck, das in guter Näherung aussieht, wie ein Kreis.</p>
-        <p><img src="tutorials/turtle1/s1_05_03a.jpg"></p>
-        <p><img src="tutorials/turtle1/s1_05_03.jpg"></p>
-        <p>Den Radius kann man verändern, indem man die Seitenlänge und die Anzahl der Ecken variiert.</p>
-        <p><img src="tutorials/turtle1/s1_05_03b.jpg"></p>
-        <p><img src="tutorials/turtle1/s1_05_03c.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>The Turtle Draws a Circle</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        If you make the side length of the polygon very small and the number of
+        sides very large, then the turtle draws a regular polygon that looks
+        like a circle in good approximation.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_03a.jpg" /></p>
+      <p><img src="tutorials/turtle1/s1_05_03.jpg" /></p>
+      <p>
+        The radius can be changed by varying the side length and the number of
+        sides.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_03b.jpg" /></p>
+      <p><img src="tutorials/turtle1/s1_05_03c.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_05_bsp03" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Schildkröte malt einen Kreis</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_05_bsp03" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Turtle Draws a Circle
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_05_bsp03').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_05_03.p5xml');
-};
+  document.getElementById("s1_05_bsp03").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_05_03.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Regelmäßige Vielecke</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Mit einer zweiten Wiederholungsschleife, in welcher die Anzahl der Ecken automatisch vergrößert wird, kann die Schildkröte viele verschiedene regelmäßige Vielecke zeichnen.</p>
-        <p><img src="tutorials/turtle1/s1_05_04a.jpg"></p>
-        <p>Das Programm wird dazu wie folgt verändert:</p>
-        <p><img src="tutorials/turtle1/s1_05_04.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Regular Polygons</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        With a second repeat loop in which the number of sides is automatically
+        increased, the turtle can draw many different regular polygons.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_04a.jpg" /></p>
+      <p>The program is changed as follows:</p>
+      <p><img src="tutorials/turtle1/s1_05_04.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_05_bsp04" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Vom Dreieck zum Kreis</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_05_bsp04" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;From Triangle to Circle
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_05_bsp04').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_05_04.p5xml');
-};
+  document.getElementById("s1_05_bsp04").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_05_04.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
 <div class="card mt-3 mb-3">
-  <div class="card-header"><b>Viele Kreise</b></div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Mit einer geeigneten Kombination von Seitenlänge, Anzahl der Ecken und Erhöhung der Anzahl der Ecken, kann man der Schildkröte beibringen ein, paar Kreise zu zeichen.</p>
-        <p><img src="tutorials/turtle1/s1_05_05a.jpg"></p>
-        <p>Das Programm wird dazu wie folgt verändert:</p>
-        <p><img src="tutorials/turtle1/s1_05_05.jpg"></p>
-      </li>
-    </ul>
+  <div class="card-header"><b>Many Circles</b></div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        With a suitable combination of side length, number of sides and increase
+        in the number of sides, you can teach the turtle to draw a few circles.
+      </p>
+      <p><img src="tutorials/turtle1/s1_05_05a.jpg" /></p>
+      <p>The program is changed as follows:</p>
+      <p><img src="tutorials/turtle1/s1_05_05.jpg" /></p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm laden:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="s1_05_bsp05" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Viele Kreise</button>
-      </li> 
-    </ul>
+  <div class="card-header">Load Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="s1_05_bsp05" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Many Circles
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('s1_05_bsp05').onclick = function() {
-  loadBeispielProgramm('tutorials/turtle1/s1_05_05.p5xml');
-};
+  document.getElementById("s1_05_bsp05").onclick = function () {
+    loadBeispielProgramm("tutorials/turtle1/s1_05_05.p5xml");
+  };
 </script>

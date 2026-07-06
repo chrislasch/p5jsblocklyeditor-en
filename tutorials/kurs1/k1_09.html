@@ -1,121 +1,163 @@
-<h4><i class="bi bi-easel"></i>&nbsp;K1.9a: Vergrößern</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.9a: Scaling</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Vergrößerung relativ zum Koordinatenursprung</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <p>Mit dem Block "Vergrößerung" aus der Kategorie "p5-Helfer" kann die Zeichenfläche vergrößert werden.</p>
-        <p>Im folgenden Programm wird die Vergrößerung animiert, indem eine Variable "vergroesserungsfaktor" festgelegt wird und deren Wert bei jedem Durchlauf im "draw"-Block geändert wird. Die Zeichenfläche wird dann mit dem Block "Vergroesserung" um den Wert der Variablen "vergroesserungsfaktor" vergrößert.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_09_01.jpg">
-      </li> 
-      <li class="list-group-item">
-        <p>Mit dem Block "Vergrößerung" aus der Kategorie "p5-Helfer" kann die Zeichenfläche vergrößert werden.</p>
-        <p>Im folgenden Programm wird die Vergrößerung animiert, indem eine Variable "vergroesserungsfaktor" festgelegt wird und deren Wert bei jedem Durchlauf im "draw"-Block geändert wird. Die Zeichenfläche wird dann mit dem Block "Vergroesserung" um den Wert der Variablen "vergroesserungsfaktor" vergrößert.</p>
-        <p>Man beobachtet dabei etwas unerwartetes: der Kreis wird nicht nur vergrößert, sondern auch verschoben.</p>
-      </li>      
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_09_01a.jpg">
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_09_01b.jpg">
-      </li>      
-      <li class="list-group-item">
-        <p>Der Grund für die gleichzeitige Vergrößerung und Verschiebung ist, dass ja die gesamte Zeichenfläche vergrößert wird. Dadurch werden auch Entfernungen größer. Der Kreis wurd auf die Koordinaten (10/10) platziert und hatt am Anfang einen kleinen Abstand zum Ursprung oben links in der Ecke. Mit der Vergrößerung wird dieser Abstand vergrößert, weswegen der Kreis nach unten rechts verschoben wird.</p>
-      </li> 
-    </ul>
+  <div class="card-header">Scaling Relative to the Coordinate Origin</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        With the "Scale" block from the "p5-Helper" category, the drawing area
+        can be scaled.
+      </p>
+      <p>
+        In the following program, the scaling is animated by defining a variable
+        "scalingFactor" and changing its value on each pass through the "draw"
+        block. The drawing area is then scaled by the value of the variable
+        "scalingFactor" using the "Scale" block.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_09_01.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        With the "Scale" block from the "p5-Helper" category, the drawing area
+        can be scaled.
+      </p>
+      <p>
+        In the following program, the scaling is animated by defining a variable
+        "scalingFactor" and changing its value on each pass through the "draw"
+        block. The drawing area is then scaled by the value of the variable
+        "scalingFactor" using the "Scale" block.
+      </p>
+      <p>
+        You observe something unexpected: the circle is not only scaled but also
+        moved.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_09_01a.jpg" />
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_09_01b.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>
+        The reason for the simultaneous scaling and translation is that the
+        entire drawing area is scaled. This also makes distances larger. The
+        circle was placed at coordinates (10/10) and had a small distance from
+        the origin in the upper left corner at the beginning. With scaling, this
+        distance is increased, which is why the circle is moved down and to the
+        right.
+      </p>
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_09_bsp01" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Vergrößern mit Verschiebung</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_09_bsp01" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Scale with Translation
+      </button>
+    </li>
+  </ul>
 </div>
 
 <script>
-document.getElementById('k1_09_bsp01').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_09_01.p5xml');
-};
+  document.getElementById("k1_09_bsp01").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_09_01.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.9b: Vergrößern ohne Verschieben</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.9b: Scale Without Translation</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">Erst Verschieben, dann vergrößern</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Wenn eine Figur nur vergrößert werden soll, ohne dass sie gleichzeitig verschoben wird, muss sie genau auf dem Koordinatenursprung sitzen. Also verschiebt man zuerst den Koordinatenursprung an die gewünschte Stelle auf der Zeichenfläche und vergrößert erst dann die Zeichenfläche.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_09_02a.jpg">
-      </li> 
-      <li class="list-group-item">
-          <p>Das Programm dazu sieht dann wie folgt aus:</p>
-      </li>      
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_09_02.jpg">
-      </li> 
-    </ul>
+  <div class="card-header">First Translate, Then Scale</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        If a figure should only be scaled without being translated at the same
+        time, it must sit exactly on the coordinate origin. So you first move
+        the coordinate origin to the desired location on the drawing area and
+        then scale the drawing area.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_09_02a.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>The program for this then looks like this:</p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_09_02.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_09_bsp02" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;An einer Stelle vergrößern</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_09_bsp02" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Scale at a Location
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_09_bsp02').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_09_02.p5xml');
-};
+  document.getElementById("k1_09_bsp02").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_09_02.p5xml");
+  };
 </script>
 
-<hr>
+<hr />
 
-<h4><i class="bi bi-easel"></i>&nbsp;K1.9c: Nicht alles vergrößern</h4>
+<h4><i class="bi bi-easel"></i>&nbsp;K1.9c: Don't Scale Everything</h4>
 
 <div class="card mt-3 mb-3">
-  <div class="card-header">"push-pop"-Block</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-          <p>Wenn nur eine Figur vergrößert werden soll, alle anderen aber unverändert bleiben sollen, dann setzt man den Block "Vergrößerung" in den "push-pop"-Block. Damit wirkt die Vergrößerung des Koordinatensystems nur auf die Figuren, die im "push-pop"-Block stehen.</p>
-      </li>
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_09_03a.jpg">
-      </li> 
-      <li class="list-group-item">
-          <p>Das Programm sieht dann wie folgt aus:</p>
-      </li> 
-      <li class="list-group-item">
-        <img src="tutorials/kurs1/k1_09_03.jpg">
-      </li>       
-    </ul>
+  <div class="card-header">"push-pop" Block</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p>
+        If only one figure should be scaled while all others should remain
+        unchanged, you put the "Scale" block in the "push-pop" block. This way,
+        the scaling of the coordinate system only affects the figures that are
+        in the "push-pop" block.
+      </p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_09_03a.jpg" />
+    </li>
+    <li class="list-group-item">
+      <p>The program then looks like this:</p>
+    </li>
+    <li class="list-group-item">
+      <img src="tutorials/kurs1/k1_09_03.jpg" />
+    </li>
+  </ul>
 </div>
 
 <div class="card mb-3">
-  <div class="card-header">Beispielprogramm starten:</div>  
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <button id="k1_09_bsp03" type="button" class="btn btn-light"><i class="bi bi-play-fill"></i>&nbsp;&nbsp;Vergrößerung mit "push-pop"-Block</button>
-      </li> 
-    </ul>
+  <div class="card-header">Start Example Program:</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <button id="k1_09_bsp03" type="button" class="btn btn-light">
+        <i class="bi bi-play-fill"></i>&nbsp;&nbsp;Scaling with "push-pop" Block
+      </button>
+    </li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <script>
-document.getElementById('k1_09_bsp03').onclick = function() {
-  loadBeispielProgramm('tutorials/kurs1/k1_09_03.p5xml');
-};
+  document.getElementById("k1_09_bsp03").onclick = function () {
+    loadBeispielProgramm("tutorials/kurs1/k1_09_03.p5xml");
+  };
 </script>

@@ -1,26 +1,26 @@
 // Pt 2021 - MIT-License
 
-//Kategorie: Aussehen
+//Category: Appearance
 Blockly.Blocks['p5_color'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("p5-Farbe:");
+        .appendField("p5 color:");
     this.appendValueInput("r")
         .setCheck("Number")
-        .appendField("rot:");
+        .appendField("red:");
     this.appendValueInput("g")
         .setCheck("Number")
-        .appendField("grün:");
+        .appendField("green:");
     this.appendValueInput("b")
         .setCheck("Number")
-        .appendField("blau:");
+        .appendField("blue:");
     this.appendValueInput("t")
         .setCheck("Number")
-        .appendField("Durchsichtigkeit:");        
+        .appendField("transparency:");        
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(farbeAussehen);
-    this.setTooltip("Legt eine p5-Farbe fest");
+    this.setTooltip("Set a p5 color");
     this.setHelpUrl("https://p5js.org/reference/#/p5/color");
   }
 };
@@ -37,15 +37,15 @@ Blockly.JavaScript['p5_color'] = function(block) {
 Blockly.Blocks['background_pick'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Hintergrundfarbe:");
+        .appendField("Background color:");
     this.appendDummyInput()
         .appendField(new Blockly.FieldColour("#ff0000"), "farbe");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Hintergrundfarbe festlegen.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/background");
+    this.setTooltip("Set background color.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/background");
   }
 };
 
@@ -59,12 +59,12 @@ Blockly.Blocks['background_colorname'] = {
   init: function() {
     this.appendValueInput("farbname")
         .setCheck(null)
-        .appendField("Hintergrundfarbe =");
+        .appendField("Background color =");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Farbname eingeben");
- this.setHelpUrl("https://htmlcolorcodes.com/color-names/");
+    this.setTooltip("Enter color name");
+    this.setHelpUrl("https://htmlcolorcodes.com/color-names/");
   }
 };
 
@@ -77,15 +77,15 @@ Blockly.JavaScript['background_colorname'] = function(block) {
 Blockly.Blocks['stroke_pick'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Linienfarbe:");
+        .appendField("Stroke color:");
     this.appendDummyInput()
         .appendField(new Blockly.FieldColour("#ff0000"), "farbe");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Linienfarbe festlegen.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/stroke");
+    this.setTooltip("Set stroke color.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/stroke");
   }
 };
 
@@ -99,12 +99,12 @@ Blockly.Blocks['stroke_colorname'] = {
   init: function() {
     this.appendValueInput("farbname")
         .setCheck(null)
-        .appendField("Linienfarbe =");
+        .appendField("Stroke color =");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Farbname eingeben");
- this.setHelpUrl("https://htmlcolorcodes.com/color-names/");
+    this.setTooltip("Enter color name");
+    this.setHelpUrl("https://htmlcolorcodes.com/color-names/");
   }
 };
 
@@ -117,15 +117,15 @@ Blockly.JavaScript['stroke_colorname'] = function(block) {
 Blockly.Blocks['fill_pick'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Füllfarbe:");
+        .appendField("Fill color:");
     this.appendDummyInput()
         .appendField(new Blockly.FieldColour("#ff0000"), "farbe");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Füllfarbe festlegen.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/fill");
+    this.setTooltip("Set fill color.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/fill");
   }
 };
 
@@ -139,12 +139,12 @@ Blockly.Blocks['fill_colorname'] = {
   init: function() {
     this.appendValueInput("farbname")
         .setCheck(null)
-        .appendField("Füllfarbe =");
+        .appendField("Fill color =");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Farbname eingeben");
- this.setHelpUrl("https://htmlcolorcodes.com/color-names/");
+    this.setTooltip("Enter color name");
+    this.setHelpUrl("https://htmlcolorcodes.com/color-names/");
   }
 };
 
@@ -157,12 +157,12 @@ Blockly.JavaScript['fill_colorname'] = function(block) {
 Blockly.Blocks['nofill'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("ohne Füllfarbe");
+        .appendField("No fill color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Die Figuren werden nicht mit Farbe ausgefüllt.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/noFill");
+    this.setTooltip("Shapes will not be filled with color.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/noFill");
   }
 };
 
@@ -174,7 +174,7 @@ Blockly.JavaScript['nofill'] = function(block) {
 Blockly.Blocks['strokeweight_number'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Liniendicke:")
+        .appendField("Stroke weight:")
         .appendField(new Blockly.FieldNumber(0, 0, maxKoord, 0.1), "weight");
     this.appendDummyInput()
         .appendField("px");
@@ -182,8 +182,8 @@ Blockly.Blocks['strokeweight_number'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Legt die Liniendicke fest.");
- this.setHelpUrl("https://p5js.org/reference/#/p5/strokeWeight");
+    this.setTooltip("Set stroke weight.");
+    this.setHelpUrl("https://p5js.org/reference/#/p5/strokeWeight");
   }
 };
 
@@ -196,21 +196,21 @@ Blockly.JavaScript['strokeweight_number'] = function(block) {
 Blockly.Blocks['background_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Hintergrundfarbe");
+        .appendField("Background color");
     this.appendValueInput("r")
         .setCheck("Number")
-        .appendField("rot:");
+        .appendField("red:");
     this.appendValueInput("g")
         .setCheck("Number")
-        .appendField("grün:");
+        .appendField("green:");
     this.appendValueInput("b")
         .setCheck("Number")
-        .appendField("blau:");
+        .appendField("blue:");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
-    this.setTooltip("Hintergrundfarbe festlegen.");
+    this.setTooltip("Set background color.");
     this.setHelpUrl("https://p5js.org/reference/#/p5/background");
   }
 };
@@ -226,24 +226,24 @@ Blockly.JavaScript['background_var'] = function(block) {
 Blockly.Blocks['fill_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Füllfarbe:");
+        .appendField("Fill color:");
     this.appendValueInput("r")
         .setCheck("Number")
-        .appendField("rot:");
+        .appendField("red:");
     this.appendValueInput("g")
         .setCheck("Number")
-        .appendField("grün:");
+        .appendField("green:");
     this.appendValueInput("b")
         .setCheck("Number")
-        .appendField("blau:");
+        .appendField("blue:");
     this.appendValueInput("t")
         .setCheck("Number")
-        .appendField("Durchsichtigkeit:");        
+        .appendField("transparency:");        
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
-    this.setTooltip("Legt die Füllfarbe fest");
+    this.setTooltip("Set fill color");
     this.setHelpUrl("https://p5js.org/reference/#/p5/fill");
   }
 };
@@ -260,24 +260,24 @@ Blockly.JavaScript['fill_var'] = function(block) {
 Blockly.Blocks['stroke_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Linienfarbe:");
+        .appendField("Stroke color:");
     this.appendValueInput("r")
         .setCheck("Number")
-        .appendField("rot:");
+        .appendField("red:");
     this.appendValueInput("g")
         .setCheck("Number")
-        .appendField("grün:");
+        .appendField("green:");
     this.appendValueInput("b")
         .setCheck("Number")
-        .appendField("blau:");
+        .appendField("blue:");
     this.appendValueInput("t")
         .setCheck("Number")
-        .appendField("Durchsichtigkeit:");         
+        .appendField("transparency:");         
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
-    this.setTooltip("Legt die Linienfarbe fest");
+    this.setTooltip("Set stroke color");
     this.setHelpUrl("https://p5js.org/reference/#/p5/stroke");
   }
 };
@@ -294,7 +294,7 @@ Blockly.JavaScript['stroke_var'] = function(block) {
 Blockly.Blocks['strokeweight_var'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Liniendicke:");
+        .appendField("Stroke weight:");
     this.appendValueInput("dicke")
         .setCheck("Number");
     this.appendDummyInput()
@@ -303,7 +303,7 @@ Blockly.Blocks['strokeweight_var'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeAussehen);
- this.setTooltip("Legt die Liniendicke fest.");
+ this.setTooltip("Set stroke weight.");
  this.setHelpUrl("https://p5js.org/reference/#/p5/strokeWeight");
   }
 };

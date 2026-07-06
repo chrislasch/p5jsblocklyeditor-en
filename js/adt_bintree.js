@@ -12,8 +12,8 @@ Blockly.Blocks['adt_binaerBaum_neu'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTBinTree);
- this.setTooltip("Ein Binärbaum wird angelegt.");
- this.setHelpUrl("");
+    this.setTooltip("A binary tree is created.");
+    this.setHelpUrl("");
   }
 };
 
@@ -129,18 +129,18 @@ Blockly.Blocks['adt_binaerBaum_bDrucker'] = {
         .appendField("bDrucker()");
     this.appendValueInput("xT")
         .setCheck("Number")
-        .appendField("xKoord:");
+        .appendField("xCoord:");
     this.appendValueInput("yT")
         .setCheck("Number")
-        .appendField("yKoord:");
+        .appendField("yCoord:");
     this.appendValueInput("dX")
         .setCheck("Number")
-        .appendField("Breite:");        
+        .appendField("Width:");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);    
     this.setColour(farbeADTBinTree);
- this.setTooltip("Ein Binärbaum wird angelegt.");
+ this.setTooltip("A binary tree is created.");
  this.setHelpUrl("");
   }
 };
@@ -198,7 +198,7 @@ Blockly.Blocks['adt_binaerBaum_inhalteinfuegen'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTBinTree);
- this.setTooltip("Fügt in den Baum einen neuen Knoten ein.");
+ this.setTooltip("Inserts a new node into the tree.");
  this.setHelpUrl("");
   }
 };
@@ -222,7 +222,7 @@ Blockly.Blocks['adt_binaerBaum_inhaltentfernen'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTBinTree);
- this.setTooltip("Entfernt aus dem Baum einen Knoten.");
+ this.setTooltip("Removes a node from the tree.");
  this.setHelpUrl("");
   }
 };
@@ -239,11 +239,11 @@ Blockly.Blocks['adt_binaerBaum_maxTiefe'] = {
     this.appendValueInput("binBaumVariable")
         .appendField("");      
     this.appendDummyInput()
-        .appendField(".maxTiefe(): Ganzzahl");
+        .appendField(".maxTiefe(): Integer");
     this.setInputsInline(true);
     this.setOutput(true, null);        
     this.setColour(farbeADTBinTree);
- this.setTooltip("Die maximale Tiefe des Binärbaums wird ermittelt.");
+ this.setTooltip("Returns the maximum depth of the binary tree.");
  this.setHelpUrl("");
   }
 };
@@ -264,7 +264,7 @@ Blockly.Blocks['adt_binaerBaum_gewichten'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(farbeADTBinTree);
- this.setTooltip("Ein Binärbaum wird gewichtet.");
+ this.setTooltip("Balances a binary tree.");
  this.setHelpUrl("");
   }
 };
