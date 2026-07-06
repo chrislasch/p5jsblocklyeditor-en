@@ -1,0 +1,89 @@
+{
+  "source": "basketGrid_lightning_00.p5xml",
+  "canvas": {
+    "width": 600,
+    "height": 600
+  },
+  "background": "#f4f1ea",
+  "grid": {
+    "rings": 5,
+    "columns": 6,
+    "symmetry": 6
+  },
+  "initial_fill_color": "#333333",
+  "start": {
+    "ring": 0,
+    "col": 0
+  },
+  "wrap_edges": true,
+  "steps": [
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "right"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "up"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "up"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "right"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "right"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "up"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "up"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "right"
+    },
+    {
+      "op": "fill"
+    },
+    {
+      "op": "move",
+      "dir": "right"
+    },
+    {
+      "op": "fill"
+    }
+  ],
+  "warnings": [],
+  "title": "Lightning"
+}
